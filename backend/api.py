@@ -1,14 +1,25 @@
-from fastapi import FastAPI, Query
+from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel, Field
+
 from cost_estimation import get_carbon_forecast
 from milp import schedule_job_milp, calculate_naive_assignment
+from train_config import get_dc_profile
+from train_orchestrator import (
+    TrainingOrchestrator,
+    parse_hp_json,
+    resolve_dc_id_with_hook,
+)
+from train_store import TrainRunStore
 
 app = FastAPI()
+run_store = TrainRunStore()
+train_orchestrator = TrainingOrchestrator(run_store)
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
-    allow_methods=["GET"],
+    allow_methods=["GET", "POST"],
     allow_headers=["*"],
 )
 
@@ -36,6 +47,23 @@ DC_META: dict[str, dict] = {
         "lng": 27.1938,
     },
 }
+
+
+class CreateTrainingRunRequest(BaseModel):
+    hp_json: str = Field(..., min_length=2)
+    dc_id: str | None = None
+    dataset_rel_path: str | None = None
+    job_name: str | None = None
+
+
+@app.on_event("startup")
+def _startup_orchestrator() -> None:
+    train_orchestrator.start()
+
+
+@app.on_event("shutdown")
+def _shutdown_orchestrator() -> None:
+    train_orchestrator.stop()
 
 
 @app.get("/api/schedule")
@@ -92,3 +120,58 @@ def get_schedule(
         print(f"MILP solver failed: {e}")
 
     return {"data_centers": data_centers, "optimal": optimal}
+
+
+@app.post("/api/train/runs")
+def create_training_run(payload: CreateTrainingRunRequest):
+    try:
+        effective_hp = parse_hp_json(payload.hp_json)
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e)) from e
+
+    resolved_dc_id = resolve_dc_id_with_hook(
+        payload.dc_id,
+        context={"dataset_rel_path": payload.dataset_rel_path},
+    )
+    if not resolved_dc_id:
+        raise HTTPException(
+            status_code=400,
+            detail="dc_id missing and MILP resolver hook did not return a datacentre",
+        )
+
+    try:
+        profile = get_dc_profile(resolved_dc_id)
+    except (KeyError, ValueError) as e:
+        raise HTTPException(status_code=400, detail=str(e)) from e
+
+    row = run_store.create_run(
+        hp_json=payload.hp_json,
+        dc_id=resolved_dc_id,
+        namespace=profile["namespace"],
+        dataset_rel_path=payload.dataset_rel_path,
+        job_name=payload.job_name,
+    )
+
+    return {
+        "run_id": row["run_id"],
+        "status": row["status"],
+        "effective_hp": effective_hp,
+        "dc_id": row["dc_id"],
+        "queue_position": int(row["queue_position"]),
+    }
+
+
+@app.get("/api/train/runs/{run_id}")
+def get_training_run(run_id: str):
+    run = run_store.get_run(run_id)
+    if run is None:
+        raise HTTPException(status_code=404, detail=f"run_id '{run_id}' not found")
+    return run
+
+
+@app.get("/api/train/runs")
+def list_training_runs(
+    status: str | None = Query(default=None),
+    limit: int = Query(default=50, ge=1, le=500),
+):
+    return {"runs": run_store.list_runs(status=status, limit=limit)}
