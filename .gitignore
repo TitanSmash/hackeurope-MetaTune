@@ -1,0 +1,4 @@
+*euler_scripts/
+.cache/
+.pyc
+__pycache__/
