@@ -1,0 +1,11 @@
+# Core GPU training stack (CUDA wheels are pulled via Dockerfile extra-index-url)
+torch>=2.2.0
+transformers>=4.41.0
+datasets>=2.19.0
+accelerate>=0.30.0
+peft>=0.11.0
+
+# Common tokenizer/checkpoint/runtime deps for HF fine-tuning
+safetensors>=0.4.0
+sentencepiece>=0.2.0
+protobuf>=4.25.0
