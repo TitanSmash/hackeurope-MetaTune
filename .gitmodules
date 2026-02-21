@@ -1,0 +1,3 @@
+[submodule "metatune-ai"]
+	path = metatune-ai
+	url = git@github.com:adam505x/metatune-ai.git
