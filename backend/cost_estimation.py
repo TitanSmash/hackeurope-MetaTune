@@ -5,12 +5,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import os
 
-DATA_CENTERS = {
-    "Crusoe_Abilene_TX": {"lat": 32.4487, "lon": -99.7331, "base_carbon": 100},
-    "AWS_US_East_VA": {"lat": 39.0438, "lon": -77.4874, "base_carbon": 100},
-    "Google_Hamina_FI": {"lat": 60.5693, "lon": 27.1938, "base_carbon": 100},
-}
-
 
 # --- THE PHYSICS ENGINE ---
 def calc_wind_megawatts(wind_speed_kmh):
@@ -20,23 +14,40 @@ def calc_wind_megawatts(wind_speed_kmh):
     elif v >= 12.0:
         return 2.0
     else:
-        return (0.5 * 1.225 * (math.pi * 45.0**2) * (v**3) * 0.40) / 1_000_000
+        return (0.5 * 1.225 * (math.pi * 45.0**2) * (v**3) * 0.40) / 10_000_000
 
 
 def calc_solar_megawatts(irradiance_w_m2):
-    return (10000 * 0.20 * irradiance_w_m2 * 0.75) / 1_000_000
+    return (10000 * 0.20 * irradiance_w_m2 * 0.75) / 10_000_000
 
 
 # --------------------------
 
 
-def get_carbon_forecast():
+def get_carbon_forecast(csv_path="datacenters.csv", days_ahead=7):
+    # Load datacenters from CSV dynamically
+    dcs_df = pd.read_csv(csv_path)
+
+    # Map CSV rows to dictionary
+    DATA_CENTERS = {}
+    for _, row in dcs_df.iterrows():
+        name = row["data center name"]
+        # Use 'co2 emissions per hour' as the base carbon intensity
+        DATA_CENTERS[name] = {
+            "lat": row["latitude"],
+            "lon": row["longitude"],
+            "base_carbon": row["base_carbon"],
+        }
+
     forecast_data = []
     url = "https://api.open-meteo.com/v1/forecast"
 
-    # FIX 1: Updated Pandas syntax to avoid the deprecation warning
     now_utc = pd.Timestamp.now("UTC").floor("h")
-    end_utc = now_utc + pd.Timedelta(hours=23)
+    # Extend timeline to 7 days ahead
+    end_utc = now_utc + pd.Timedelta(days=days_ahead) - pd.Timedelta(hours=1)
+
+    # Query 8 days to ensure full 168-hour coverage (avoids timezone cutting off the end)
+    forecast_days_param = min(16, days_ahead + 1)
 
     for name, site in DATA_CENTERS.items():
         params = {
@@ -44,7 +55,7 @@ def get_carbon_forecast():
             "longitude": site["lon"],
             "hourly": "wind_speed_10m,direct_normal_irradiance",
             "timezone": "GMT",
-            "forecast_days": 2,
+            "forecast_days": forecast_days_param,
         }
 
         try:
@@ -70,7 +81,7 @@ def get_carbon_forecast():
                 forecast_data.append(
                     {
                         "Time_UTC": t,
-                        "Data_Center": name.replace("_", " "),
+                        "Data_Center": name,
                         "Effective_Carbon_gCO2": round(effective_carbon, 1),
                     }
                 )
@@ -80,6 +91,7 @@ def get_carbon_forecast():
 
     df = pd.DataFrame(forecast_data)
 
+    # Pivot for clean terminal output
     pivot_df = df.pivot(
         index="Time_UTC", columns="Data_Center", values="Effective_Carbon_gCO2"
     )
@@ -87,7 +99,8 @@ def get_carbon_forecast():
 
     pivot_df["Recommended Routing"] = pivot_df[data_center_cols].idxmin(axis=1)
 
-    pivot_df.index = pivot_df.index.strftime("%H:00 GMT")
+    # Update timestamp format to include the date (needed for a 7-day view)
+    pivot_df.index = pivot_df.index.strftime("%Y-%m-%d %H:00 GMT")
     pivot_df.reset_index(inplace=True)
     pivot_df.rename(columns={"Time_UTC": "Global Time"}, inplace=True)
     pivot_df.columns.name = None
@@ -96,7 +109,7 @@ def get_carbon_forecast():
 
 
 def plot_carbon_forecast(raw_df):
-    plt.figure(figsize=(12, 6))
+    plt.figure(figsize=(15, 6))
     sns.set_style("darkgrid")
 
     for center in raw_df["Data_Center"].unique():
@@ -105,32 +118,34 @@ def plot_carbon_forecast(raw_df):
             subset["Time_UTC"],
             subset["Effective_Carbon_gCO2"],
             label=center,
-            linewidth=3,
-            marker="o",
-            markersize=4,
+            linewidth=2,
         )
 
     plt.title(
-        "Global 24-Hour Carbon Forecast (Synchronized to GMT)",
+        "Global 7-Day Carbon Forecast (Synchronized to GMT)",
         fontsize=16,
         fontweight="bold",
     )
     plt.xlabel("Coordinated Universal Time (UTC/GMT)", fontsize=12)
-    plt.ylabel("Effective Carbon Intensity (gCO/kWh)", fontsize=12)
+    plt.ylabel("Effective Carbon Intensity (gCO₂/kWh)", fontsize=12)
     plt.legend(title="Data Center Locations")
     plt.tight_layout()
 
-    # FIX 2: Save the plot as an image file instead of trying to open a GUI window
-    output_filename = "carbon_forecast_plot.png"
+    # Save the 7-day plot
+    output_filename = "carbon_forecast_plot_7days.png"
     plt.savefig(output_filename, dpi=300, bbox_inches="tight")
     print(
-        f"\n✅ Success! Plot saved successfully as: {os.path.abspath(output_filename)}"
+        f"\n✅ Success! 7-Day Plot saved successfully as: {os.path.abspath(output_filename)}"
     )
 
 
 if __name__ == "__main__":
-    print("Fetching global weather data and aligning to GMT timeline...\n")
+    print("Fetching global 7-day weather data and aligning to GMT timeline...\n")
     pivot_df, raw_df = get_carbon_forecast()
 
-    print(pivot_df.to_markdown(index=False))
+    # Since a 7-day forecast has 168 rows, we will print the first 24 hours to the terminal
+    # and save the rest for the plot or other files.
+    print(pivot_df.head(24).to_markdown(index=False))
+    print(f"\n... (Data truncated for display. {len(pivot_df)} total hours mapped.)")
+
     plot_carbon_forecast(raw_df)

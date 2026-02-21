@@ -1,0 +1,6 @@
+data center name,latitude,longitude,co2 emissions per hour,ram capacity,base_carbon
+Crusoe Ireland,60.5693,27.2090,15.4,5120, 5
+Crusoe Italy,53.4808,-6.5011,22.1,10485, 5
+Crusoe Abilene TX,32.4487,-99.7331,0.0,2048, 5
+Crusoe Charlotte NC,35.6543,-81.2180,5.5,2621, 5
+Crusoe Iceland,45.1058,8.8596,45.2,7864, 5
