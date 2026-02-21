@@ -1,0 +1,19 @@
+{
+  "dataset_slug": "teknium_openhermes_2_5",
+  "status": "ok",
+  "n_train_total": 384,
+  "n_heldout": 192,
+  "neighbor_k": 10,
+  "n_suggestions": 3,
+  "n_neighbors_used": 10,
+  "mae": 0.2069300426445008,
+  "rmse": 0.24812426320536551,
+  "spearman": 0.022232772653282693,
+  "best_actual_val_loss": 2.5895366579027423,
+  "regret_at_1": 0.035043742000876676,
+  "regret_at_3": 0.035043742000876676,
+  "regret_at_5": 0.035043742000876676,
+  "suggestion_best_matched_val_loss": 2.6677834608240976,
+  "suggestion_best_matched_regret": 0.07824680292135522,
+  "suggestion_mean_matched_regret": 0.14995663428842163
+}

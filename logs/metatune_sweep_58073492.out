@@ -1,0 +1,27 @@
+==============================================
+LoRA METATUNE SWEEP - STAGE 1
+==============================================
+Job ID:      58073492
+Host:        eu-g6-076
+Config:      simulations/configs/lora_metatune_v1.yaml
+Project root:/cluster/home/ssutanto/hackeurope-MetaTune
+Scratch:     /cluster/scratch/ssutanto/hackeurope-MetaTune
+Output root: /cluster/scratch/ssutanto/hackeurope-MetaTune/outputs
+Raw root:    /cluster/scratch/ssutanto/hackeurope-MetaTune/outputs/raw_datasets
+Proc root:   /cluster/scratch/ssutanto/hackeurope-MetaTune/outputs/datasets
+SIM cache:   /cluster/scratch/ssutanto/datasets
+HF home:     /cluster/scratch/ssutanto/hackeurope-MetaTune/huggingface_cache
+Datasets:    /cluster/scratch/ssutanto/datasets
+Models:      /cluster/scratch/ssutanto/hackeurope-MetaTune/huggingface_cache/transformers
+GPUs:        3
+Jobs/GPU:    2
+Parallel:    6
+Started:     Sat Feb 21 08:13:19 PM CET 2026
+==============================================
+[2026-02-21 20:13:19] [prefetch] already available, skipping
+[2026-02-21 20:13:19] [stage] building manifest via: build-stage1
+[stage1] HuggingFaceH4/ultrachat_200k: 96 trials
+[stage1] roneneldan/TinyStories: 96 trials
+[stage1] teknium/OpenHermes-2.5: 96 trials
+[stage1] global manifest: outputs/manifests/stage1_all.jsonl
+[2026-02-21 20:13:20] [stage] manifest not found: /cluster/scratch/ssutanto/hackeurope-MetaTune/outputs/manifests/stage1_all.jsonl
