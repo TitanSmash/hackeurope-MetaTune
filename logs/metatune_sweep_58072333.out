@@ -1,0 +1,21 @@
+==============================================
+LoRA METATUNE SWEEP - STAGE 1
+==============================================
+Job ID:      58072333
+Host:        eu-g6-003
+Config:      simulations/configs/lora_metatune_v1.yaml
+Project root:/cluster/home/ssutanto/hackeurope-MetaTune
+Scratch:     /cluster/scratch/ssutanto/hackeurope-MetaTune
+Output root: /cluster/scratch/ssutanto/hackeurope-MetaTune/outputs
+Raw root:    /cluster/scratch/ssutanto/hackeurope-MetaTune/outputs/raw_datasets
+Proc root:   /cluster/scratch/ssutanto/hackeurope-MetaTune/outputs/datasets
+SIM cache:   /cluster/scratch/ssutanto/datasets
+HF home:     /cluster/scratch/ssutanto/hackeurope-MetaTune/huggingface_cache
+Datasets:    /cluster/scratch/ssutanto/datasets
+Models:      /cluster/scratch/ssutanto/hackeurope-MetaTune/huggingface_cache/transformers
+GPUs:        3
+Jobs/GPU:    2
+Parallel:    6
+Started:     Sat Feb 21 07:55:12 PM CET 2026
+==============================================
+[2026-02-21 19:55:12] [prefetch] /cluster/scratch/ssutanto/hackeurope-MetaTune/outputs/datasets/index.json not found, running prefetch

@@ -1,0 +1,899 @@
+==============================================
+LoRA METATUNE SWEEP - STAGE 1
+==============================================
+Job ID:      58073771
+Host:        eu-g6-010
+Config:      simulations/configs/lora_metatune_v1.yaml
+Project root:/cluster/home/ssutanto/hackeurope-MetaTune
+Scratch:     /cluster/scratch/ssutanto/hackeurope-MetaTune
+Output root: /cluster/scratch/ssutanto/hackeurope-MetaTune/outputs
+Raw root:    /cluster/scratch/ssutanto/hackeurope-MetaTune/outputs/raw_datasets
+Proc root:   /cluster/scratch/ssutanto/hackeurope-MetaTune/outputs/datasets
+SIM cache:   /cluster/scratch/ssutanto/datasets
+HF home:     /cluster/scratch/ssutanto/hackeurope-MetaTune/huggingface_cache
+Datasets:    /cluster/scratch/ssutanto/datasets
+Models:      /cluster/scratch/ssutanto/hackeurope-MetaTune/huggingface_cache/transformers
+GPUs:        3
+Jobs/GPU:    2
+Parallel:    6
+Started:     Sat Feb 21 08:21:06 PM CET 2026
+==============================================
+[2026-02-21 20:21:06] [prefetch] already available, skipping
+[2026-02-21 20:21:06] [stage] building manifest via: build-stage1
+[stage1] HuggingFaceH4/ultrachat_200k: 0 trials
+[stage1] roneneldan/TinyStories: 0 trials
+[stage1] teknium/OpenHermes-2.5: 0 trials
+[stage1] global manifest: outputs/manifests/stage1_all.jsonl
+[2026-02-21 20:21:06] [stage] running manifest: /cluster/scratch/ssutanto/hackeurope-MetaTune/outputs/manifests/stage1_all.jsonl (trials=288)
+[2026-02-21 20:21:06] [stage] launched idx=0 gpu=0 pid=1291508 running=1/6
+[2026-02-21 20:21:06] [stage] launched idx=1 gpu=0 pid=1291513 running=2/6
+[2026-02-21 20:21:06] [stage] launched idx=2 gpu=1 pid=1291518 running=3/6
+[2026-02-21 20:21:06] [stage] launched idx=3 gpu=1 pid=1291523 running=4/6
+[2026-02-21 20:21:06] [stage] launched idx=4 gpu=2 pid=1291528 running=5/6
+[2026-02-21 20:21:06] [stage] launched idx=5 gpu=2 pid=1291533 running=6/6
+[2026-02-21 20:21:08] [stage] finished idx=2 gpu=1 status=ok
+[2026-02-21 20:21:08] [stage] progress 1/288 (0%), failed=0, active=5
+[2026-02-21 20:21:08] [stage] finished idx=1 gpu=0 status=ok
+[2026-02-21 20:21:08] [stage] progress 2/288 (0%), failed=0, active=4
+[2026-02-21 20:21:08] [stage] finished idx=3 gpu=1 status=ok
+[2026-02-21 20:21:08] [stage] progress 3/288 (1%), failed=0, active=3
+[2026-02-21 20:21:08] [stage] finished idx=4 gpu=2 status=ok
+[2026-02-21 20:21:08] [stage] progress 4/288 (1%), failed=0, active=2
+[2026-02-21 20:21:08] [stage] finished idx=0 gpu=0 status=ok
+[2026-02-21 20:21:08] [stage] progress 5/288 (1%), failed=0, active=1
+[2026-02-21 20:21:08] [stage] finished idx=5 gpu=2 status=ok
+[2026-02-21 20:21:08] [stage] progress 6/288 (2%), failed=0, active=0
+[2026-02-21 20:21:08] [stage] launched idx=6 gpu=0 pid=1291724 running=1/6
+[2026-02-21 20:21:08] [stage] launched idx=7 gpu=0 pid=1291729 running=2/6
+[2026-02-21 20:21:08] [stage] launched idx=8 gpu=1 pid=1291734 running=3/6
+[2026-02-21 20:21:08] [stage] launched idx=9 gpu=1 pid=1291739 running=4/6
+[2026-02-21 20:21:08] [stage] launched idx=10 gpu=2 pid=1291744 running=5/6
+[2026-02-21 20:21:08] [stage] launched idx=11 gpu=2 pid=1291749 running=6/6
+[2026-02-21 20:21:10] [stage] finished idx=8 gpu=1 status=ok
+[2026-02-21 20:21:10] [stage] progress 7/288 (2%), failed=0, active=5
+[2026-02-21 20:21:10] [stage] finished idx=9 gpu=1 status=ok
+[2026-02-21 20:21:10] [stage] progress 8/288 (2%), failed=0, active=4
+[2026-02-21 20:21:10] [stage] finished idx=6 gpu=0 status=ok
+[2026-02-21 20:21:10] [stage] progress 9/288 (3%), failed=0, active=3
+[2026-02-21 20:21:10] [stage] finished idx=7 gpu=0 status=ok
+[2026-02-21 20:21:10] [stage] progress 10/288 (3%), failed=0, active=2
+[2026-02-21 20:21:10] [stage] finished idx=10 gpu=2 status=ok
+[2026-02-21 20:21:10] [stage] progress 11/288 (3%), failed=0, active=1
+[2026-02-21 20:21:10] [stage] finished idx=11 gpu=2 status=ok
+[2026-02-21 20:21:10] [stage] progress 12/288 (4%), failed=0, active=0
+[2026-02-21 20:21:11] [stage] launched idx=12 gpu=0 pid=1291935 running=1/6
+[2026-02-21 20:21:11] [stage] launched idx=13 gpu=0 pid=1291940 running=2/6
+[2026-02-21 20:21:11] [stage] launched idx=14 gpu=1 pid=1291945 running=3/6
+[2026-02-21 20:21:11] [stage] launched idx=15 gpu=1 pid=1291950 running=4/6
+[2026-02-21 20:21:11] [stage] launched idx=16 gpu=2 pid=1291955 running=5/6
+[2026-02-21 20:21:11] [stage] launched idx=17 gpu=2 pid=1291960 running=6/6
+[2026-02-21 20:21:13] [stage] finished idx=13 gpu=0 status=ok
+[2026-02-21 20:21:13] [stage] progress 13/288 (4%), failed=0, active=5
+[2026-02-21 20:21:13] [stage] finished idx=14 gpu=1 status=ok
+[2026-02-21 20:21:13] [stage] progress 14/288 (4%), failed=0, active=4
+[2026-02-21 20:21:13] [stage] finished idx=12 gpu=0 status=ok
+[2026-02-21 20:21:13] [stage] progress 15/288 (5%), failed=0, active=3
+[2026-02-21 20:21:13] [stage] finished idx=15 gpu=1 status=ok
+[2026-02-21 20:21:13] [stage] progress 16/288 (5%), failed=0, active=2
+[2026-02-21 20:21:13] [stage] finished idx=16 gpu=2 status=ok
+[2026-02-21 20:21:13] [stage] progress 17/288 (5%), failed=0, active=1
+[2026-02-21 20:21:13] [stage] finished idx=17 gpu=2 status=ok
+[2026-02-21 20:21:13] [stage] progress 18/288 (6%), failed=0, active=0
+[2026-02-21 20:21:13] [stage] launched idx=18 gpu=0 pid=1292148 running=1/6
+[2026-02-21 20:21:13] [stage] launched idx=19 gpu=0 pid=1292153 running=2/6
+[2026-02-21 20:21:13] [stage] launched idx=20 gpu=1 pid=1292158 running=3/6
+[2026-02-21 20:21:13] [stage] launched idx=21 gpu=1 pid=1292163 running=4/6
+[2026-02-21 20:21:13] [stage] launched idx=22 gpu=2 pid=1292168 running=5/6
+[2026-02-21 20:21:13] [stage] launched idx=23 gpu=2 pid=1292173 running=6/6
+[2026-02-21 20:21:15] [stage] finished idx=23 gpu=2 status=ok
+[2026-02-21 20:21:15] [stage] progress 19/288 (6%), failed=0, active=5
+[2026-02-21 20:21:15] [stage] finished idx=18 gpu=0 status=ok
+[2026-02-21 20:21:15] [stage] progress 20/288 (6%), failed=0, active=4
+[2026-02-21 20:21:15] [stage] finished idx=21 gpu=1 status=ok
+[2026-02-21 20:21:15] [stage] progress 21/288 (7%), failed=0, active=3
+[2026-02-21 20:21:15] [stage] finished idx=22 gpu=2 status=ok
+[2026-02-21 20:21:15] [stage] progress 22/288 (7%), failed=0, active=2
+[2026-02-21 20:21:15] [stage] finished idx=20 gpu=1 status=ok
+[2026-02-21 20:21:15] [stage] progress 23/288 (7%), failed=0, active=1
+[2026-02-21 20:21:15] [stage] finished idx=19 gpu=0 status=ok
+[2026-02-21 20:21:15] [stage] progress 24/288 (8%), failed=0, active=0
+[2026-02-21 20:21:15] [stage] launched idx=24 gpu=0 pid=1292392 running=1/6
+[2026-02-21 20:21:15] [stage] launched idx=25 gpu=0 pid=1292397 running=2/6
+[2026-02-21 20:21:15] [stage] launched idx=26 gpu=1 pid=1292402 running=3/6
+[2026-02-21 20:21:15] [stage] launched idx=27 gpu=1 pid=1292407 running=4/6
+[2026-02-21 20:21:15] [stage] launched idx=28 gpu=2 pid=1292412 running=5/6
+[2026-02-21 20:21:15] [stage] launched idx=29 gpu=2 pid=1292417 running=6/6
+[2026-02-21 20:21:17] [stage] finished idx=27 gpu=1 status=ok
+[2026-02-21 20:21:17] [stage] progress 25/288 (8%), failed=0, active=5
+[2026-02-21 20:21:17] [stage] finished idx=26 gpu=1 status=ok
+[2026-02-21 20:21:17] [stage] progress 26/288 (9%), failed=0, active=4
+[2026-02-21 20:21:17] [stage] finished idx=24 gpu=0 status=ok
+[2026-02-21 20:21:17] [stage] progress 27/288 (9%), failed=0, active=3
+[2026-02-21 20:21:17] [stage] finished idx=25 gpu=0 status=ok
+[2026-02-21 20:21:17] [stage] progress 28/288 (9%), failed=0, active=2
+[2026-02-21 20:21:17] [stage] finished idx=29 gpu=2 status=ok
+[2026-02-21 20:21:17] [stage] progress 29/288 (10%), failed=0, active=1
+[2026-02-21 20:21:17] [stage] finished idx=28 gpu=2 status=ok
+[2026-02-21 20:21:17] [stage] progress 30/288 (10%), failed=0, active=0
+[2026-02-21 20:21:17] [stage] launched idx=30 gpu=0 pid=1292608 running=1/6
+[2026-02-21 20:21:17] [stage] launched idx=31 gpu=0 pid=1292613 running=2/6
+[2026-02-21 20:21:17] [stage] launched idx=32 gpu=1 pid=1292618 running=3/6
+[2026-02-21 20:21:17] [stage] launched idx=33 gpu=1 pid=1292623 running=4/6
+[2026-02-21 20:21:17] [stage] launched idx=34 gpu=2 pid=1292628 running=5/6
+[2026-02-21 20:21:17] [stage] launched idx=35 gpu=2 pid=1292633 running=6/6
+[2026-02-21 20:21:19] [stage] finished idx=32 gpu=1 status=ok
+[2026-02-21 20:21:19] [stage] progress 31/288 (10%), failed=0, active=5
+[2026-02-21 20:21:19] [stage] finished idx=31 gpu=0 status=ok
+[2026-02-21 20:21:19] [stage] progress 32/288 (11%), failed=0, active=4
+[2026-02-21 20:21:19] [stage] finished idx=35 gpu=2 status=ok
+[2026-02-21 20:21:19] [stage] progress 33/288 (11%), failed=0, active=3
+[2026-02-21 20:21:19] [stage] finished idx=30 gpu=0 status=ok
+[2026-02-21 20:21:19] [stage] progress 34/288 (11%), failed=0, active=2
+[2026-02-21 20:21:19] [stage] finished idx=33 gpu=1 status=ok
+[2026-02-21 20:21:19] [stage] progress 35/288 (12%), failed=0, active=1
+[2026-02-21 20:21:19] [stage] finished idx=34 gpu=2 status=ok
+[2026-02-21 20:21:19] [stage] progress 36/288 (12%), failed=0, active=0
+[2026-02-21 20:21:19] [stage] launched idx=36 gpu=0 pid=1292822 running=1/6
+[2026-02-21 20:21:19] [stage] launched idx=37 gpu=0 pid=1292827 running=2/6
+[2026-02-21 20:21:19] [stage] launched idx=38 gpu=1 pid=1292832 running=3/6
+[2026-02-21 20:21:19] [stage] launched idx=39 gpu=1 pid=1292837 running=4/6
+[2026-02-21 20:21:19] [stage] launched idx=40 gpu=2 pid=1292842 running=5/6
+[2026-02-21 20:21:19] [stage] launched idx=41 gpu=2 pid=1292847 running=6/6
+[2026-02-21 20:21:21] [stage] finished idx=39 gpu=1 status=ok
+[2026-02-21 20:21:21] [stage] progress 37/288 (12%), failed=0, active=5
+[2026-02-21 20:21:21] [stage] finished idx=38 gpu=1 status=ok
+[2026-02-21 20:21:21] [stage] progress 38/288 (13%), failed=0, active=4
+[2026-02-21 20:21:21] [stage] finished idx=41 gpu=2 status=ok
+[2026-02-21 20:21:21] [stage] progress 39/288 (13%), failed=0, active=3
+[2026-02-21 20:21:21] [stage] finished idx=40 gpu=2 status=ok
+[2026-02-21 20:21:21] [stage] progress 40/288 (13%), failed=0, active=2
+[2026-02-21 20:21:22] [stage] finished idx=36 gpu=0 status=ok
+[2026-02-21 20:21:22] [stage] progress 41/288 (14%), failed=0, active=1
+[2026-02-21 20:21:22] [stage] finished idx=37 gpu=0 status=ok
+[2026-02-21 20:21:22] [stage] progress 42/288 (14%), failed=0, active=0
+[2026-02-21 20:21:22] [stage] launched idx=42 gpu=0 pid=1293061 running=1/6
+[2026-02-21 20:21:22] [stage] launched idx=43 gpu=0 pid=1293066 running=2/6
+[2026-02-21 20:21:22] [stage] launched idx=44 gpu=1 pid=1293071 running=3/6
+[2026-02-21 20:21:22] [stage] launched idx=45 gpu=1 pid=1293076 running=4/6
+[2026-02-21 20:21:22] [stage] launched idx=46 gpu=2 pid=1293081 running=5/6
+[2026-02-21 20:21:22] [stage] launched idx=47 gpu=2 pid=1293085 running=6/6
+[2026-02-21 20:21:24] [stage] finished idx=42 gpu=0 status=ok
+[2026-02-21 20:21:24] [stage] progress 43/288 (14%), failed=0, active=5
+[2026-02-21 20:21:24] [stage] finished idx=43 gpu=0 status=ok
+[2026-02-21 20:21:24] [stage] progress 44/288 (15%), failed=0, active=4
+[2026-02-21 20:21:24] [stage] finished idx=45 gpu=1 status=ok
+[2026-02-21 20:21:24] [stage] progress 45/288 (15%), failed=0, active=3
+[2026-02-21 20:21:24] [stage] finished idx=44 gpu=1 status=ok
+[2026-02-21 20:21:24] [stage] progress 46/288 (15%), failed=0, active=2
+[2026-02-21 20:21:24] [stage] finished idx=46 gpu=2 status=ok
+[2026-02-21 20:21:24] [stage] progress 47/288 (16%), failed=0, active=1
+[2026-02-21 20:21:24] [stage] finished idx=47 gpu=2 status=ok
+[2026-02-21 20:21:24] [stage] progress 48/288 (16%), failed=0, active=0
+[2026-02-21 20:21:24] [stage] launched idx=48 gpu=0 pid=1293273 running=1/6
+[2026-02-21 20:21:24] [stage] launched idx=49 gpu=0 pid=1293278 running=2/6
+[2026-02-21 20:21:24] [stage] launched idx=50 gpu=1 pid=1293283 running=3/6
+[2026-02-21 20:21:24] [stage] launched idx=51 gpu=1 pid=1293288 running=4/6
+[2026-02-21 20:21:24] [stage] launched idx=52 gpu=2 pid=1293293 running=5/6
+[2026-02-21 20:21:24] [stage] launched idx=53 gpu=2 pid=1293298 running=6/6
+[2026-02-21 20:21:26] [stage] finished idx=53 gpu=2 status=ok
+[2026-02-21 20:21:26] [stage] progress 49/288 (17%), failed=0, active=5
+[2026-02-21 20:21:26] [stage] finished idx=52 gpu=2 status=ok
+[2026-02-21 20:21:26] [stage] progress 50/288 (17%), failed=0, active=4
+[2026-02-21 20:21:26] [stage] finished idx=48 gpu=0 status=ok
+[2026-02-21 20:21:26] [stage] progress 51/288 (17%), failed=0, active=3
+[2026-02-21 20:21:26] [stage] finished idx=49 gpu=0 status=ok
+[2026-02-21 20:21:26] [stage] progress 52/288 (18%), failed=0, active=2
+[2026-02-21 20:21:26] [stage] finished idx=51 gpu=1 status=ok
+[2026-02-21 20:21:26] [stage] progress 53/288 (18%), failed=0, active=1
+[2026-02-21 20:21:26] [stage] finished idx=50 gpu=1 status=ok
+[2026-02-21 20:21:26] [stage] progress 54/288 (18%), failed=0, active=0
+[2026-02-21 20:21:26] [stage] launched idx=54 gpu=0 pid=1293484 running=1/6
+[2026-02-21 20:21:26] [stage] launched idx=55 gpu=0 pid=1293489 running=2/6
+[2026-02-21 20:21:26] [stage] launched idx=56 gpu=1 pid=1293494 running=3/6
+[2026-02-21 20:21:26] [stage] launched idx=57 gpu=1 pid=1293499 running=4/6
+[2026-02-21 20:21:26] [stage] launched idx=58 gpu=2 pid=1293504 running=5/6
+[2026-02-21 20:21:26] [stage] launched idx=59 gpu=2 pid=1293509 running=6/6
+[2026-02-21 20:21:28] [stage] finished idx=55 gpu=0 status=ok
+[2026-02-21 20:21:28] [stage] progress 55/288 (19%), failed=0, active=5
+[2026-02-21 20:21:28] [stage] finished idx=54 gpu=0 status=ok
+[2026-02-21 20:21:28] [stage] progress 56/288 (19%), failed=0, active=4
+[2026-02-21 20:21:28] [stage] finished idx=59 gpu=2 status=ok
+[2026-02-21 20:21:28] [stage] progress 57/288 (19%), failed=0, active=3
+[2026-02-21 20:21:28] [stage] finished idx=58 gpu=2 status=ok
+[2026-02-21 20:21:28] [stage] progress 58/288 (20%), failed=0, active=2
+[2026-02-21 20:21:28] [stage] finished idx=57 gpu=1 status=ok
+[2026-02-21 20:21:28] [stage] progress 59/288 (20%), failed=0, active=1
+[2026-02-21 20:21:28] [stage] finished idx=56 gpu=1 status=ok
+[2026-02-21 20:21:28] [stage] progress 60/288 (20%), failed=0, active=0
+[2026-02-21 20:21:29] [stage] launched idx=60 gpu=0 pid=1293720 running=1/6
+[2026-02-21 20:21:29] [stage] launched idx=61 gpu=0 pid=1293724 running=2/6
+[2026-02-21 20:21:29] [stage] launched idx=62 gpu=1 pid=1293730 running=3/6
+[2026-02-21 20:21:29] [stage] launched idx=63 gpu=1 pid=1293735 running=4/6
+[2026-02-21 20:21:29] [stage] launched idx=64 gpu=2 pid=1293740 running=5/6
+[2026-02-21 20:21:29] [stage] launched idx=65 gpu=2 pid=1293745 running=6/6
+[2026-02-21 20:21:31] [stage] finished idx=64 gpu=2 status=ok
+[2026-02-21 20:21:31] [stage] progress 61/288 (21%), failed=0, active=5
+[2026-02-21 20:21:31] [stage] finished idx=65 gpu=2 status=ok
+[2026-02-21 20:21:31] [stage] progress 62/288 (21%), failed=0, active=4
+[2026-02-21 20:21:31] [stage] finished idx=62 gpu=1 status=ok
+[2026-02-21 20:21:31] [stage] progress 63/288 (21%), failed=0, active=3
+[2026-02-21 20:21:31] [stage] finished idx=63 gpu=1 status=ok
+[2026-02-21 20:21:31] [stage] progress 64/288 (22%), failed=0, active=2
+[2026-02-21 20:21:31] [stage] finished idx=61 gpu=0 status=ok
+[2026-02-21 20:21:31] [stage] progress 65/288 (22%), failed=0, active=1
+[2026-02-21 20:21:31] [stage] finished idx=60 gpu=0 status=ok
+[2026-02-21 20:21:31] [stage] progress 66/288 (22%), failed=0, active=0
+[2026-02-21 20:21:31] [stage] launched idx=66 gpu=0 pid=1293931 running=1/6
+[2026-02-21 20:21:31] [stage] launched idx=67 gpu=0 pid=1293936 running=2/6
+[2026-02-21 20:21:31] [stage] launched idx=68 gpu=1 pid=1293941 running=3/6
+[2026-02-21 20:21:31] [stage] launched idx=69 gpu=1 pid=1293946 running=4/6
+[2026-02-21 20:21:31] [stage] launched idx=70 gpu=2 pid=1293951 running=5/6
+[2026-02-21 20:21:31] [stage] launched idx=71 gpu=2 pid=1293956 running=6/6
+[2026-02-21 20:21:33] [stage] finished idx=70 gpu=2 status=ok
+[2026-02-21 20:21:33] [stage] progress 67/288 (23%), failed=0, active=5
+[2026-02-21 20:21:33] [stage] finished idx=71 gpu=2 status=ok
+[2026-02-21 20:21:33] [stage] progress 68/288 (23%), failed=0, active=4
+[2026-02-21 20:21:33] [stage] finished idx=69 gpu=1 status=ok
+[2026-02-21 20:21:33] [stage] progress 69/288 (23%), failed=0, active=3
+[2026-02-21 20:21:33] [stage] finished idx=68 gpu=1 status=ok
+[2026-02-21 20:21:33] [stage] progress 70/288 (24%), failed=0, active=2
+[2026-02-21 20:21:33] [stage] finished idx=66 gpu=0 status=ok
+[2026-02-21 20:21:33] [stage] progress 71/288 (24%), failed=0, active=1
+[2026-02-21 20:21:33] [stage] finished idx=67 gpu=0 status=ok
+[2026-02-21 20:21:33] [stage] progress 72/288 (25%), failed=0, active=0
+[2026-02-21 20:21:33] [stage] launched idx=72 gpu=0 pid=1294142 running=1/6
+[2026-02-21 20:21:33] [stage] launched idx=73 gpu=0 pid=1294147 running=2/6
+[2026-02-21 20:21:33] [stage] launched idx=74 gpu=1 pid=1294152 running=3/6
+[2026-02-21 20:21:33] [stage] launched idx=75 gpu=1 pid=1294157 running=4/6
+[2026-02-21 20:21:33] [stage] launched idx=76 gpu=2 pid=1294162 running=5/6
+[2026-02-21 20:21:33] [stage] launched idx=77 gpu=2 pid=1294167 running=6/6
+[2026-02-21 20:21:35] [stage] finished idx=77 gpu=2 status=ok
+[2026-02-21 20:21:35] [stage] progress 73/288 (25%), failed=0, active=5
+[2026-02-21 20:21:35] [stage] finished idx=76 gpu=2 status=ok
+[2026-02-21 20:21:35] [stage] progress 74/288 (25%), failed=0, active=4
+[2026-02-21 20:21:35] [stage] finished idx=72 gpu=0 status=ok
+[2026-02-21 20:21:35] [stage] progress 75/288 (26%), failed=0, active=3
+[2026-02-21 20:21:35] [stage] finished idx=73 gpu=0 status=ok
+[2026-02-21 20:21:35] [stage] progress 76/288 (26%), failed=0, active=2
+[2026-02-21 20:21:35] [stage] finished idx=74 gpu=1 status=ok
+[2026-02-21 20:21:35] [stage] progress 77/288 (26%), failed=0, active=1
+[2026-02-21 20:21:35] [stage] finished idx=75 gpu=1 status=ok
+[2026-02-21 20:21:35] [stage] progress 78/288 (27%), failed=0, active=0
+[2026-02-21 20:21:35] [stage] launched idx=78 gpu=0 pid=1294363 running=1/6
+[2026-02-21 20:21:35] [stage] launched idx=79 gpu=0 pid=1294368 running=2/6
+[2026-02-21 20:21:35] [stage] launched idx=80 gpu=1 pid=1294373 running=3/6
+[2026-02-21 20:21:35] [stage] launched idx=81 gpu=1 pid=1294378 running=4/6
+[2026-02-21 20:21:35] [stage] launched idx=82 gpu=2 pid=1294383 running=5/6
+[2026-02-21 20:21:35] [stage] launched idx=83 gpu=2 pid=1294388 running=6/6
+[2026-02-21 20:21:37] [stage] finished idx=79 gpu=0 status=ok
+[2026-02-21 20:21:37] [stage] progress 79/288 (27%), failed=0, active=5
+[2026-02-21 20:21:37] [stage] finished idx=78 gpu=0 status=ok
+[2026-02-21 20:21:37] [stage] progress 80/288 (27%), failed=0, active=4
+[2026-02-21 20:21:37] [stage] finished idx=83 gpu=2 status=ok
+[2026-02-21 20:21:37] [stage] progress 81/288 (28%), failed=0, active=3
+[2026-02-21 20:21:37] [stage] finished idx=82 gpu=2 status=ok
+[2026-02-21 20:21:37] [stage] progress 82/288 (28%), failed=0, active=2
+[2026-02-21 20:21:37] [stage] finished idx=81 gpu=1 status=ok
+[2026-02-21 20:21:37] [stage] progress 83/288 (28%), failed=0, active=1
+[2026-02-21 20:21:37] [stage] finished idx=80 gpu=1 status=ok
+[2026-02-21 20:21:37] [stage] progress 84/288 (29%), failed=0, active=0
+[2026-02-21 20:21:37] [stage] launched idx=84 gpu=0 pid=1294600 running=1/6
+[2026-02-21 20:21:38] [stage] launched idx=85 gpu=0 pid=1294605 running=2/6
+[2026-02-21 20:21:38] [stage] launched idx=86 gpu=1 pid=1294610 running=3/6
+[2026-02-21 20:21:38] [stage] launched idx=87 gpu=1 pid=1294615 running=4/6
+[2026-02-21 20:21:38] [stage] launched idx=88 gpu=2 pid=1294620 running=5/6
+[2026-02-21 20:21:38] [stage] launched idx=89 gpu=2 pid=1294625 running=6/6
+[2026-02-21 20:21:40] [stage] finished idx=86 gpu=1 status=ok
+[2026-02-21 20:21:40] [stage] progress 85/288 (29%), failed=0, active=5
+[2026-02-21 20:21:40] [stage] finished idx=87 gpu=1 status=ok
+[2026-02-21 20:21:40] [stage] progress 86/288 (29%), failed=0, active=4
+[2026-02-21 20:21:40] [stage] finished idx=88 gpu=2 status=ok
+[2026-02-21 20:21:40] [stage] progress 87/288 (30%), failed=0, active=3
+[2026-02-21 20:21:40] [stage] finished idx=89 gpu=2 status=ok
+[2026-02-21 20:21:40] [stage] progress 88/288 (30%), failed=0, active=2
+[2026-02-21 20:21:40] [stage] finished idx=84 gpu=0 status=ok
+[2026-02-21 20:21:40] [stage] progress 89/288 (30%), failed=0, active=1
+[2026-02-21 20:21:40] [stage] finished idx=85 gpu=0 status=ok
+[2026-02-21 20:21:40] [stage] progress 90/288 (31%), failed=0, active=0
+[2026-02-21 20:21:40] [stage] launched idx=90 gpu=0 pid=1294812 running=1/6
+[2026-02-21 20:21:40] [stage] launched idx=91 gpu=0 pid=1294817 running=2/6
+[2026-02-21 20:21:40] [stage] launched idx=92 gpu=1 pid=1294822 running=3/6
+[2026-02-21 20:21:40] [stage] launched idx=93 gpu=1 pid=1294827 running=4/6
+[2026-02-21 20:21:40] [stage] launched idx=94 gpu=2 pid=1294832 running=5/6
+[2026-02-21 20:21:40] [stage] launched idx=95 gpu=2 pid=1294837 running=6/6
+[2026-02-21 20:21:42] [stage] finished idx=90 gpu=0 status=ok
+[2026-02-21 20:21:42] [stage] progress 91/288 (31%), failed=0, active=5
+[2026-02-21 20:21:42] [stage] finished idx=91 gpu=0 status=ok
+[2026-02-21 20:21:42] [stage] progress 92/288 (31%), failed=0, active=4
+[2026-02-21 20:21:42] [stage] finished idx=95 gpu=2 status=ok
+[2026-02-21 20:21:42] [stage] progress 93/288 (32%), failed=0, active=3
+[2026-02-21 20:21:42] [stage] finished idx=94 gpu=2 status=ok
+[2026-02-21 20:21:42] [stage] progress 94/288 (32%), failed=0, active=2
+[2026-02-21 20:21:42] [stage] finished idx=93 gpu=1 status=ok
+[2026-02-21 20:21:42] [stage] progress 95/288 (32%), failed=0, active=1
+[2026-02-21 20:21:42] [stage] finished idx=92 gpu=1 status=ok
+[2026-02-21 20:21:42] [stage] progress 96/288 (33%), failed=0, active=0
+[2026-02-21 20:21:42] [stage] launched idx=96 gpu=0 pid=1295023 running=1/6
+[2026-02-21 20:21:42] [stage] launched idx=97 gpu=0 pid=1295028 running=2/6
+[2026-02-21 20:21:42] [stage] launched idx=98 gpu=1 pid=1295033 running=3/6
+[2026-02-21 20:21:42] [stage] launched idx=99 gpu=1 pid=1295038 running=4/6
+[2026-02-21 20:21:42] [stage] launched idx=100 gpu=2 pid=1295043 running=5/6
+[2026-02-21 20:21:42] [stage] launched idx=101 gpu=2 pid=1295048 running=6/6
+[2026-02-21 20:21:44] [stage] finished idx=97 gpu=0 status=ok
+[2026-02-21 20:21:44] [stage] progress 97/288 (33%), failed=0, active=5
+[2026-02-21 20:21:44] [stage] finished idx=96 gpu=0 status=ok
+[2026-02-21 20:21:44] [stage] progress 98/288 (34%), failed=0, active=4
+[2026-02-21 20:21:44] [stage] finished idx=100 gpu=2 status=ok
+[2026-02-21 20:21:44] [stage] progress 99/288 (34%), failed=0, active=3
+[2026-02-21 20:21:44] [stage] finished idx=101 gpu=2 status=ok
+[2026-02-21 20:21:44] [stage] progress 100/288 (34%), failed=0, active=2
+[2026-02-21 20:21:44] [stage] finished idx=99 gpu=1 status=ok
+[2026-02-21 20:21:44] [stage] progress 101/288 (35%), failed=0, active=1
+[2026-02-21 20:21:44] [stage] finished idx=98 gpu=1 status=ok
+[2026-02-21 20:21:44] [stage] progress 102/288 (35%), failed=0, active=0
+[2026-02-21 20:21:44] [stage] launched idx=102 gpu=0 pid=1295269 running=1/6
+[2026-02-21 20:21:44] [stage] launched idx=103 gpu=0 pid=1295274 running=2/6
+[2026-02-21 20:21:44] [stage] launched idx=104 gpu=1 pid=1295279 running=3/6
+[2026-02-21 20:21:44] [stage] launched idx=105 gpu=1 pid=1295284 running=4/6
+[2026-02-21 20:21:44] [stage] launched idx=106 gpu=2 pid=1295289 running=5/6
+[2026-02-21 20:21:44] [stage] launched idx=107 gpu=2 pid=1295294 running=6/6
+[2026-02-21 20:21:46] [stage] finished idx=106 gpu=2 status=ok
+[2026-02-21 20:21:46] [stage] progress 103/288 (35%), failed=0, active=5
+[2026-02-21 20:21:46] [stage] finished idx=105 gpu=1 status=ok
+[2026-02-21 20:21:46] [stage] progress 104/288 (36%), failed=0, active=4
+[2026-02-21 20:21:46] [stage] finished idx=102 gpu=0 status=ok
+[2026-02-21 20:21:46] [stage] progress 105/288 (36%), failed=0, active=3
+[2026-02-21 20:21:46] [stage] finished idx=107 gpu=2 status=ok
+[2026-02-21 20:21:46] [stage] progress 106/288 (36%), failed=0, active=2
+[2026-02-21 20:21:46] [stage] finished idx=103 gpu=0 status=ok
+[2026-02-21 20:21:46] [stage] progress 107/288 (37%), failed=0, active=1
+[2026-02-21 20:21:46] [stage] finished idx=104 gpu=1 status=ok
+[2026-02-21 20:21:46] [stage] progress 108/288 (37%), failed=0, active=0
+[2026-02-21 20:21:46] [stage] launched idx=108 gpu=0 pid=1295483 running=1/6
+[2026-02-21 20:21:46] [stage] launched idx=109 gpu=0 pid=1295488 running=2/6
+[2026-02-21 20:21:46] [stage] launched idx=110 gpu=1 pid=1295493 running=3/6
+[2026-02-21 20:21:46] [stage] launched idx=111 gpu=1 pid=1295498 running=4/6
+[2026-02-21 20:21:46] [stage] launched idx=112 gpu=2 pid=1295503 running=5/6
+[2026-02-21 20:21:46] [stage] launched idx=113 gpu=2 pid=1295507 running=6/6
+[2026-02-21 20:21:48] [stage] finished idx=113 gpu=2 status=ok
+[2026-02-21 20:21:48] [stage] progress 109/288 (37%), failed=0, active=5
+[2026-02-21 20:21:48] [stage] finished idx=112 gpu=2 status=ok
+[2026-02-21 20:21:48] [stage] progress 110/288 (38%), failed=0, active=4
+[2026-02-21 20:21:48] [stage] finished idx=109 gpu=0 status=ok
+[2026-02-21 20:21:48] [stage] progress 111/288 (38%), failed=0, active=3
+[2026-02-21 20:21:48] [stage] finished idx=108 gpu=0 status=ok
+[2026-02-21 20:21:48] [stage] progress 112/288 (38%), failed=0, active=2
+[2026-02-21 20:21:48] [stage] finished idx=110 gpu=1 status=ok
+[2026-02-21 20:21:48] [stage] progress 113/288 (39%), failed=0, active=1
+[2026-02-21 20:21:48] [stage] finished idx=111 gpu=1 status=ok
+[2026-02-21 20:21:48] [stage] progress 114/288 (39%), failed=0, active=0
+[2026-02-21 20:21:48] [stage] launched idx=114 gpu=0 pid=1295695 running=1/6
+[2026-02-21 20:21:48] [stage] launched idx=115 gpu=0 pid=1295700 running=2/6
+[2026-02-21 20:21:48] [stage] launched idx=116 gpu=1 pid=1295705 running=3/6
+[2026-02-21 20:21:48] [stage] launched idx=117 gpu=1 pid=1295710 running=4/6
+[2026-02-21 20:21:48] [stage] launched idx=118 gpu=2 pid=1295715 running=5/6
+[2026-02-21 20:21:48] [stage] launched idx=119 gpu=2 pid=1295720 running=6/6
+[2026-02-21 20:21:50] [stage] finished idx=119 gpu=2 status=ok
+[2026-02-21 20:21:50] [stage] progress 115/288 (39%), failed=0, active=5
+[2026-02-21 20:21:50] [stage] finished idx=117 gpu=1 status=ok
+[2026-02-21 20:21:50] [stage] progress 116/288 (40%), failed=0, active=4
+[2026-02-21 20:21:50] [stage] finished idx=118 gpu=2 status=ok
+[2026-02-21 20:21:50] [stage] progress 117/288 (40%), failed=0, active=3
+[2026-02-21 20:21:50] [stage] finished idx=114 gpu=0 status=ok
+[2026-02-21 20:21:50] [stage] progress 118/288 (40%), failed=0, active=2
+[2026-02-21 20:21:50] [stage] finished idx=116 gpu=1 status=ok
+[2026-02-21 20:21:50] [stage] progress 119/288 (41%), failed=0, active=1
+[2026-02-21 20:21:50] [stage] finished idx=115 gpu=0 status=ok
+[2026-02-21 20:21:50] [stage] progress 120/288 (41%), failed=0, active=0
+[2026-02-21 20:21:51] [stage] launched idx=120 gpu=0 pid=1295933 running=1/6
+[2026-02-21 20:21:51] [stage] launched idx=121 gpu=0 pid=1295938 running=2/6
+[2026-02-21 20:21:51] [stage] launched idx=122 gpu=1 pid=1295943 running=3/6
+[2026-02-21 20:21:51] [stage] launched idx=123 gpu=1 pid=1295948 running=4/6
+[2026-02-21 20:21:51] [stage] launched idx=124 gpu=2 pid=1295953 running=5/6
+[2026-02-21 20:21:51] [stage] launched idx=125 gpu=2 pid=1295958 running=6/6
+[2026-02-21 20:21:53] [stage] finished idx=125 gpu=2 status=ok
+[2026-02-21 20:21:53] [stage] progress 121/288 (42%), failed=0, active=5
+[2026-02-21 20:21:53] [stage] finished idx=124 gpu=2 status=ok
+[2026-02-21 20:21:53] [stage] progress 122/288 (42%), failed=0, active=4
+[2026-02-21 20:21:53] [stage] finished idx=120 gpu=0 status=ok
+[2026-02-21 20:21:53] [stage] progress 123/288 (42%), failed=0, active=3
+[2026-02-21 20:21:53] [stage] finished idx=121 gpu=0 status=ok
+[2026-02-21 20:21:53] [stage] progress 124/288 (43%), failed=0, active=2
+[2026-02-21 20:21:53] [stage] finished idx=123 gpu=1 status=ok
+[2026-02-21 20:21:53] [stage] progress 125/288 (43%), failed=0, active=1
+[2026-02-21 20:21:53] [stage] finished idx=122 gpu=1 status=ok
+[2026-02-21 20:21:53] [stage] progress 126/288 (43%), failed=0, active=0
+[2026-02-21 20:21:53] [stage] launched idx=126 gpu=0 pid=1296147 running=1/6
+[2026-02-21 20:21:53] [stage] launched idx=127 gpu=0 pid=1296151 running=2/6
+[2026-02-21 20:21:53] [stage] launched idx=128 gpu=1 pid=1296157 running=3/6
+[2026-02-21 20:21:53] [stage] launched idx=129 gpu=1 pid=1296162 running=4/6
+[2026-02-21 20:21:53] [stage] launched idx=130 gpu=2 pid=1296167 running=5/6
+[2026-02-21 20:21:53] [stage] launched idx=131 gpu=2 pid=1296172 running=6/6
+[2026-02-21 20:21:55] [stage] finished idx=126 gpu=0 status=ok
+[2026-02-21 20:21:55] [stage] progress 127/288 (44%), failed=0, active=5
+[2026-02-21 20:21:55] [stage] finished idx=130 gpu=2 status=ok
+[2026-02-21 20:21:55] [stage] progress 128/288 (44%), failed=0, active=4
+[2026-02-21 20:21:55] [stage] finished idx=129 gpu=1 status=ok
+[2026-02-21 20:21:55] [stage] progress 129/288 (44%), failed=0, active=3
+[2026-02-21 20:21:55] [stage] finished idx=128 gpu=1 status=ok
+[2026-02-21 20:21:55] [stage] progress 130/288 (45%), failed=0, active=2
+[2026-02-21 20:21:55] [stage] finished idx=127 gpu=0 status=ok
+[2026-02-21 20:21:55] [stage] progress 131/288 (45%), failed=0, active=1
+[2026-02-21 20:21:55] [stage] finished idx=131 gpu=2 status=ok
+[2026-02-21 20:21:55] [stage] progress 132/288 (45%), failed=0, active=0
+[2026-02-21 20:21:55] [stage] launched idx=132 gpu=0 pid=1296360 running=1/6
+[2026-02-21 20:21:55] [stage] launched idx=133 gpu=0 pid=1296365 running=2/6
+[2026-02-21 20:21:55] [stage] launched idx=134 gpu=1 pid=1296370 running=3/6
+[2026-02-21 20:21:55] [stage] launched idx=135 gpu=1 pid=1296375 running=4/6
+[2026-02-21 20:21:55] [stage] launched idx=136 gpu=2 pid=1296380 running=5/6
+[2026-02-21 20:21:55] [stage] launched idx=137 gpu=2 pid=1296385 running=6/6
+[2026-02-21 20:21:57] [stage] finished idx=137 gpu=2 status=ok
+[2026-02-21 20:21:57] [stage] progress 133/288 (46%), failed=0, active=5
+[2026-02-21 20:21:57] [stage] finished idx=136 gpu=2 status=ok
+[2026-02-21 20:21:57] [stage] progress 134/288 (46%), failed=0, active=4
+[2026-02-21 20:21:57] [stage] finished idx=133 gpu=0 status=ok
+[2026-02-21 20:21:57] [stage] progress 135/288 (46%), failed=0, active=3
+[2026-02-21 20:21:57] [stage] finished idx=132 gpu=0 status=ok
+[2026-02-21 20:21:57] [stage] progress 136/288 (47%), failed=0, active=2
+[2026-02-21 20:21:57] [stage] finished idx=134 gpu=1 status=ok
+[2026-02-21 20:21:57] [stage] progress 137/288 (47%), failed=0, active=1
+[2026-02-21 20:21:57] [stage] finished idx=135 gpu=1 status=ok
+[2026-02-21 20:21:57] [stage] progress 138/288 (47%), failed=0, active=0
+[2026-02-21 20:21:57] [stage] launched idx=138 gpu=0 pid=1296571 running=1/6
+[2026-02-21 20:21:57] [stage] launched idx=139 gpu=0 pid=1296576 running=2/6
+[2026-02-21 20:21:57] [stage] launched idx=140 gpu=1 pid=1296581 running=3/6
+[2026-02-21 20:21:57] [stage] launched idx=141 gpu=1 pid=1296586 running=4/6
+[2026-02-21 20:21:57] [stage] launched idx=142 gpu=2 pid=1296591 running=5/6
+[2026-02-21 20:21:57] [stage] launched idx=143 gpu=2 pid=1296596 running=6/6
+[2026-02-21 20:21:59] [stage] finished idx=140 gpu=1 status=ok
+[2026-02-21 20:21:59] [stage] progress 139/288 (48%), failed=0, active=5
+[2026-02-21 20:21:59] [stage] finished idx=141 gpu=1 status=ok
+[2026-02-21 20:21:59] [stage] progress 140/288 (48%), failed=0, active=4
+[2026-02-21 20:22:00] [stage] finished idx=138 gpu=0 status=ok
+[2026-02-21 20:22:00] [stage] progress 141/288 (48%), failed=0, active=3
+[2026-02-21 20:22:00] [stage] finished idx=139 gpu=0 status=ok
+[2026-02-21 20:22:00] [stage] progress 142/288 (49%), failed=0, active=2
+[2026-02-21 20:22:00] [stage] finished idx=143 gpu=2 status=ok
+[2026-02-21 20:22:00] [stage] progress 143/288 (49%), failed=0, active=1
+[2026-02-21 20:22:00] [stage] finished idx=142 gpu=2 status=ok
+[2026-02-21 20:22:00] [stage] progress 144/288 (50%), failed=0, active=0
+[2026-02-21 20:22:00] [stage] launched idx=144 gpu=0 pid=1296807 running=1/6
+[2026-02-21 20:22:00] [stage] launched idx=145 gpu=0 pid=1296812 running=2/6
+[2026-02-21 20:22:00] [stage] launched idx=146 gpu=1 pid=1296817 running=3/6
+[2026-02-21 20:22:00] [stage] launched idx=147 gpu=1 pid=1296822 running=4/6
+[2026-02-21 20:22:00] [stage] launched idx=148 gpu=2 pid=1296827 running=5/6
+[2026-02-21 20:22:00] [stage] launched idx=149 gpu=2 pid=1296832 running=6/6
+[2026-02-21 20:22:02] [stage] finished idx=148 gpu=2 status=ok
+[2026-02-21 20:22:02] [stage] progress 145/288 (50%), failed=0, active=5
+[2026-02-21 20:22:02] [stage] finished idx=147 gpu=1 status=ok
+[2026-02-21 20:22:02] [stage] progress 146/288 (50%), failed=0, active=4
+[2026-02-21 20:22:02] [stage] finished idx=144 gpu=0 status=ok
+[2026-02-21 20:22:02] [stage] progress 147/288 (51%), failed=0, active=3
+[2026-02-21 20:22:02] [stage] finished idx=149 gpu=2 status=ok
+[2026-02-21 20:22:02] [stage] progress 148/288 (51%), failed=0, active=2
+[2026-02-21 20:22:02] [stage] finished idx=146 gpu=1 status=ok
+[2026-02-21 20:22:02] [stage] progress 149/288 (51%), failed=0, active=1
+[2026-02-21 20:22:02] [stage] finished idx=145 gpu=0 status=ok
+[2026-02-21 20:22:02] [stage] progress 150/288 (52%), failed=0, active=0
+[2026-02-21 20:22:02] [stage] launched idx=150 gpu=0 pid=1297023 running=1/6
+[2026-02-21 20:22:02] [stage] launched idx=151 gpu=0 pid=1297028 running=2/6
+[2026-02-21 20:22:02] [stage] launched idx=152 gpu=1 pid=1297033 running=3/6
+[2026-02-21 20:22:02] [stage] launched idx=153 gpu=1 pid=1297038 running=4/6
+[2026-02-21 20:22:02] [stage] launched idx=154 gpu=2 pid=1297043 running=5/6
+[2026-02-21 20:22:02] [stage] launched idx=155 gpu=2 pid=1297048 running=6/6
+[2026-02-21 20:22:04] [stage] finished idx=152 gpu=1 status=ok
+[2026-02-21 20:22:04] [stage] progress 151/288 (52%), failed=0, active=5
+[2026-02-21 20:22:04] [stage] finished idx=153 gpu=1 status=ok
+[2026-02-21 20:22:04] [stage] progress 152/288 (52%), failed=0, active=4
+[2026-02-21 20:22:04] [stage] finished idx=154 gpu=2 status=ok
+[2026-02-21 20:22:04] [stage] progress 153/288 (53%), failed=0, active=3
+[2026-02-21 20:22:04] [stage] finished idx=155 gpu=2 status=ok
+[2026-02-21 20:22:04] [stage] progress 154/288 (53%), failed=0, active=2
+[2026-02-21 20:22:04] [stage] finished idx=150 gpu=0 status=ok
+[2026-02-21 20:22:04] [stage] progress 155/288 (53%), failed=0, active=1
+[2026-02-21 20:22:04] [stage] finished idx=151 gpu=0 status=ok
+[2026-02-21 20:22:04] [stage] progress 156/288 (54%), failed=0, active=0
+[2026-02-21 20:22:04] [stage] launched idx=156 gpu=0 pid=1297239 running=1/6
+[2026-02-21 20:22:04] [stage] launched idx=157 gpu=0 pid=1297244 running=2/6
+[2026-02-21 20:22:04] [stage] launched idx=158 gpu=1 pid=1297249 running=3/6
+[2026-02-21 20:22:04] [stage] launched idx=159 gpu=1 pid=1297254 running=4/6
+[2026-02-21 20:22:04] [stage] launched idx=160 gpu=2 pid=1297259 running=5/6
+[2026-02-21 20:22:04] [stage] launched idx=161 gpu=2 pid=1297264 running=6/6
+[2026-02-21 20:22:06] [stage] finished idx=161 gpu=2 status=ok
+[2026-02-21 20:22:06] [stage] progress 157/288 (54%), failed=0, active=5
+[2026-02-21 20:22:06] [stage] finished idx=160 gpu=2 status=ok
+[2026-02-21 20:22:06] [stage] progress 158/288 (54%), failed=0, active=4
+[2026-02-21 20:22:06] [stage] finished idx=159 gpu=1 status=ok
+[2026-02-21 20:22:06] [stage] progress 159/288 (55%), failed=0, active=3
+[2026-02-21 20:22:06] [stage] finished idx=156 gpu=0 status=ok
+[2026-02-21 20:22:06] [stage] progress 160/288 (55%), failed=0, active=2
+[2026-02-21 20:22:07] [stage] finished idx=158 gpu=1 status=ok
+[2026-02-21 20:22:07] [stage] progress 161/288 (55%), failed=0, active=1
+[2026-02-21 20:22:07] [stage] finished idx=157 gpu=0 status=ok
+[2026-02-21 20:22:07] [stage] progress 162/288 (56%), failed=0, active=0
+[2026-02-21 20:22:07] [stage] launched idx=162 gpu=0 pid=1297475 running=1/6
+[2026-02-21 20:22:07] [stage] launched idx=163 gpu=0 pid=1297480 running=2/6
+[2026-02-21 20:22:07] [stage] launched idx=164 gpu=1 pid=1297485 running=3/6
+[2026-02-21 20:22:07] [stage] launched idx=165 gpu=1 pid=1297490 running=4/6
+[2026-02-21 20:22:07] [stage] launched idx=166 gpu=2 pid=1297495 running=5/6
+[2026-02-21 20:22:07] [stage] launched idx=167 gpu=2 pid=1297500 running=6/6
+[2026-02-21 20:22:09] [stage] finished idx=167 gpu=2 status=ok
+[2026-02-21 20:22:09] [stage] progress 163/288 (56%), failed=0, active=5
+[2026-02-21 20:22:09] [stage] finished idx=165 gpu=1 status=ok
+[2026-02-21 20:22:09] [stage] progress 164/288 (56%), failed=0, active=4
+[2026-02-21 20:22:09] [stage] finished idx=166 gpu=2 status=ok
+[2026-02-21 20:22:09] [stage] progress 165/288 (57%), failed=0, active=3
+[2026-02-21 20:22:09] [stage] finished idx=162 gpu=0 status=ok
+[2026-02-21 20:22:09] [stage] progress 166/288 (57%), failed=0, active=2
+[2026-02-21 20:22:09] [stage] finished idx=163 gpu=0 status=ok
+[2026-02-21 20:22:09] [stage] progress 167/288 (57%), failed=0, active=1
+[2026-02-21 20:22:09] [stage] finished idx=164 gpu=1 status=ok
+[2026-02-21 20:22:09] [stage] progress 168/288 (58%), failed=0, active=0
+[2026-02-21 20:22:09] [stage] launched idx=168 gpu=0 pid=1297689 running=1/6
+[2026-02-21 20:22:09] [stage] launched idx=169 gpu=0 pid=1297694 running=2/6
+[2026-02-21 20:22:09] [stage] launched idx=170 gpu=1 pid=1297699 running=3/6
+[2026-02-21 20:22:09] [stage] launched idx=171 gpu=1 pid=1297704 running=4/6
+[2026-02-21 20:22:09] [stage] launched idx=172 gpu=2 pid=1297709 running=5/6
+[2026-02-21 20:22:09] [stage] launched idx=173 gpu=2 pid=1297714 running=6/6
+[2026-02-21 20:22:11] [stage] finished idx=169 gpu=0 status=ok
+[2026-02-21 20:22:11] [stage] progress 169/288 (58%), failed=0, active=5
+[2026-02-21 20:22:11] [stage] finished idx=170 gpu=1 status=ok
+[2026-02-21 20:22:11] [stage] progress 170/288 (59%), failed=0, active=4
+[2026-02-21 20:22:11] [stage] finished idx=173 gpu=2 status=ok
+[2026-02-21 20:22:11] [stage] progress 171/288 (59%), failed=0, active=3
+[2026-02-21 20:22:11] [stage] finished idx=171 gpu=1 status=ok
+[2026-02-21 20:22:11] [stage] progress 172/288 (59%), failed=0, active=2
+[2026-02-21 20:22:11] [stage] finished idx=172 gpu=2 status=ok
+[2026-02-21 20:22:11] [stage] progress 173/288 (60%), failed=0, active=1
+[2026-02-21 20:22:11] [stage] finished idx=168 gpu=0 status=ok
+[2026-02-21 20:22:11] [stage] progress 174/288 (60%), failed=0, active=0
+[2026-02-21 20:22:11] [stage] launched idx=174 gpu=0 pid=1297911 running=1/6
+[2026-02-21 20:22:11] [stage] launched idx=175 gpu=0 pid=1297916 running=2/6
+[2026-02-21 20:22:11] [stage] launched idx=176 gpu=1 pid=1297921 running=3/6
+[2026-02-21 20:22:11] [stage] launched idx=177 gpu=1 pid=1297926 running=4/6
+[2026-02-21 20:22:11] [stage] launched idx=178 gpu=2 pid=1297931 running=5/6
+[2026-02-21 20:22:11] [stage] launched idx=179 gpu=2 pid=1297936 running=6/6
+[2026-02-21 20:22:13] [stage] finished idx=179 gpu=2 status=ok
+[2026-02-21 20:22:13] [stage] progress 175/288 (60%), failed=0, active=5
+[2026-02-21 20:22:13] [stage] finished idx=178 gpu=2 status=ok
+[2026-02-21 20:22:13] [stage] progress 176/288 (61%), failed=0, active=4
+[2026-02-21 20:22:13] [stage] finished idx=177 gpu=1 status=ok
+[2026-02-21 20:22:13] [stage] progress 177/288 (61%), failed=0, active=3
+[2026-02-21 20:22:13] [stage] finished idx=176 gpu=1 status=ok
+[2026-02-21 20:22:13] [stage] progress 178/288 (61%), failed=0, active=2
+[2026-02-21 20:22:13] [stage] finished idx=174 gpu=0 status=ok
+[2026-02-21 20:22:13] [stage] progress 179/288 (62%), failed=0, active=1
+[2026-02-21 20:22:13] [stage] finished idx=175 gpu=0 status=ok
+[2026-02-21 20:22:13] [stage] progress 180/288 (62%), failed=0, active=0
+[2026-02-21 20:22:13] [stage] launched idx=180 gpu=0 pid=1298174 running=1/6
+[2026-02-21 20:22:13] [stage] launched idx=181 gpu=0 pid=1298179 running=2/6
+[2026-02-21 20:22:13] [stage] launched idx=182 gpu=1 pid=1298184 running=3/6
+[2026-02-21 20:22:13] [stage] launched idx=183 gpu=1 pid=1298189 running=4/6
+[2026-02-21 20:22:13] [stage] launched idx=184 gpu=2 pid=1298194 running=5/6
+[2026-02-21 20:22:13] [stage] launched idx=185 gpu=2 pid=1298199 running=6/6
+[2026-02-21 20:22:15] [stage] finished idx=185 gpu=2 status=ok
+[2026-02-21 20:22:15] [stage] progress 181/288 (62%), failed=0, active=5
+[2026-02-21 20:22:15] [stage] finished idx=184 gpu=2 status=ok
+[2026-02-21 20:22:15] [stage] progress 182/288 (63%), failed=0, active=4
+[2026-02-21 20:22:15] [stage] finished idx=180 gpu=0 status=ok
+[2026-02-21 20:22:15] [stage] progress 183/288 (63%), failed=0, active=3
+[2026-02-21 20:22:15] [stage] finished idx=181 gpu=0 status=ok
+[2026-02-21 20:22:16] [stage] progress 184/288 (63%), failed=0, active=2
+[2026-02-21 20:22:16] [stage] finished idx=183 gpu=1 status=ok
+[2026-02-21 20:22:16] [stage] progress 185/288 (64%), failed=0, active=1
+[2026-02-21 20:22:16] [stage] finished idx=182 gpu=1 status=ok
+[2026-02-21 20:22:16] [stage] progress 186/288 (64%), failed=0, active=0
+[2026-02-21 20:22:16] [stage] launched idx=186 gpu=0 pid=1298390 running=1/6
+[2026-02-21 20:22:16] [stage] launched idx=187 gpu=0 pid=1298395 running=2/6
+[2026-02-21 20:22:16] [stage] launched idx=188 gpu=1 pid=1298400 running=3/6
+[2026-02-21 20:22:16] [stage] launched idx=189 gpu=1 pid=1298405 running=4/6
+[2026-02-21 20:22:16] [stage] launched idx=190 gpu=2 pid=1298410 running=5/6
+[2026-02-21 20:22:16] [stage] launched idx=191 gpu=2 pid=1298415 running=6/6
+[2026-02-21 20:22:18] [stage] finished idx=187 gpu=0 status=ok
+[2026-02-21 20:22:18] [stage] progress 187/288 (64%), failed=0, active=5
+[2026-02-21 20:22:18] [stage] finished idx=186 gpu=0 status=ok
+[2026-02-21 20:22:18] [stage] progress 188/288 (65%), failed=0, active=4
+[2026-02-21 20:22:18] [stage] finished idx=190 gpu=2 status=ok
+[2026-02-21 20:22:18] [stage] progress 189/288 (65%), failed=0, active=3
+[2026-02-21 20:22:18] [stage] finished idx=191 gpu=2 status=ok
+[2026-02-21 20:22:18] [stage] progress 190/288 (65%), failed=0, active=2
+[2026-02-21 20:22:18] [stage] finished idx=189 gpu=1 status=ok
+[2026-02-21 20:22:18] [stage] progress 191/288 (66%), failed=0, active=1
+[2026-02-21 20:22:18] [stage] finished idx=188 gpu=1 status=ok
+[2026-02-21 20:22:18] [stage] progress 192/288 (66%), failed=0, active=0
+[2026-02-21 20:22:18] [stage] launched idx=192 gpu=0 pid=1298877 running=1/6
+[2026-02-21 20:22:18] [stage] launched idx=193 gpu=0 pid=1298882 running=2/6
+[2026-02-21 20:22:18] [stage] launched idx=194 gpu=1 pid=1298887 running=3/6
+[2026-02-21 20:22:18] [stage] launched idx=195 gpu=1 pid=1298892 running=4/6
+[2026-02-21 20:22:18] [stage] launched idx=196 gpu=2 pid=1298897 running=5/6
+[2026-02-21 20:22:18] [stage] launched idx=197 gpu=2 pid=1298903 running=6/6
+[2026-02-21 20:22:20] [stage] finished idx=192 gpu=0 status=ok
+[2026-02-21 20:22:20] [stage] progress 193/288 (67%), failed=0, active=5
+[2026-02-21 20:22:20] [stage] finished idx=196 gpu=2 status=ok
+[2026-02-21 20:22:20] [stage] progress 194/288 (67%), failed=0, active=4
+[2026-02-21 20:22:20] [stage] finished idx=195 gpu=1 status=ok
+[2026-02-21 20:22:20] [stage] progress 195/288 (67%), failed=0, active=3
+[2026-02-21 20:22:20] [stage] finished idx=193 gpu=0 status=ok
+[2026-02-21 20:22:20] [stage] progress 196/288 (68%), failed=0, active=2
+[2026-02-21 20:22:20] [stage] finished idx=194 gpu=1 status=ok
+[2026-02-21 20:22:20] [stage] progress 197/288 (68%), failed=0, active=1
+[2026-02-21 20:22:20] [stage] finished idx=197 gpu=2 status=ok
+[2026-02-21 20:22:20] [stage] progress 198/288 (68%), failed=0, active=0
+[2026-02-21 20:22:20] [stage] launched idx=198 gpu=0 pid=1299371 running=1/6
+[2026-02-21 20:22:20] [stage] launched idx=199 gpu=0 pid=1299376 running=2/6
+[2026-02-21 20:22:20] [stage] launched idx=200 gpu=1 pid=1299381 running=3/6
+[2026-02-21 20:22:20] [stage] launched idx=201 gpu=1 pid=1299386 running=4/6
+[2026-02-21 20:22:20] [stage] launched idx=202 gpu=2 pid=1299391 running=5/6
+[2026-02-21 20:22:20] [stage] launched idx=203 gpu=2 pid=1299396 running=6/6
+[2026-02-21 20:22:22] [stage] finished idx=202 gpu=2 status=ok
+[2026-02-21 20:22:22] [stage] progress 199/288 (69%), failed=0, active=5
+[2026-02-21 20:22:22] [stage] finished idx=203 gpu=2 status=ok
+[2026-02-21 20:22:22] [stage] progress 200/288 (69%), failed=0, active=4
+[2026-02-21 20:22:22] [stage] finished idx=201 gpu=1 status=ok
+[2026-02-21 20:22:22] [stage] progress 201/288 (69%), failed=0, active=3
+[2026-02-21 20:22:22] [stage] finished idx=200 gpu=1 status=ok
+[2026-02-21 20:22:22] [stage] progress 202/288 (70%), failed=0, active=2
+[2026-02-21 20:22:22] [stage] finished idx=198 gpu=0 status=ok
+[2026-02-21 20:22:22] [stage] progress 203/288 (70%), failed=0, active=1
+[2026-02-21 20:22:22] [stage] finished idx=199 gpu=0 status=ok
+[2026-02-21 20:22:22] [stage] progress 204/288 (70%), failed=0, active=0
+[2026-02-21 20:22:22] [stage] launched idx=204 gpu=0 pid=1299619 running=1/6
+[2026-02-21 20:22:22] [stage] launched idx=205 gpu=0 pid=1299624 running=2/6
+[2026-02-21 20:22:22] [stage] launched idx=206 gpu=1 pid=1299629 running=3/6
+[2026-02-21 20:22:22] [stage] launched idx=207 gpu=1 pid=1299634 running=4/6
+[2026-02-21 20:22:22] [stage] launched idx=208 gpu=2 pid=1299639 running=5/6
+[2026-02-21 20:22:22] [stage] launched idx=209 gpu=2 pid=1299644 running=6/6
+[2026-02-21 20:22:24] [stage] finished idx=204 gpu=0 status=ok
+[2026-02-21 20:22:24] [stage] progress 205/288 (71%), failed=0, active=5
+[2026-02-21 20:22:24] [stage] finished idx=209 gpu=2 status=ok
+[2026-02-21 20:22:24] [stage] progress 206/288 (71%), failed=0, active=4
+[2026-02-21 20:22:24] [stage] finished idx=206 gpu=1 status=ok
+[2026-02-21 20:22:24] [stage] progress 207/288 (71%), failed=0, active=3
+[2026-02-21 20:22:24] [stage] finished idx=205 gpu=0 status=ok
+[2026-02-21 20:22:24] [stage] progress 208/288 (72%), failed=0, active=2
+[2026-02-21 20:22:24] [stage] finished idx=207 gpu=1 status=ok
+[2026-02-21 20:22:24] [stage] progress 209/288 (72%), failed=0, active=1
+[2026-02-21 20:22:24] [stage] finished idx=208 gpu=2 status=ok
+[2026-02-21 20:22:24] [stage] progress 210/288 (72%), failed=0, active=0
+[2026-02-21 20:22:24] [stage] launched idx=210 gpu=0 pid=1299833 running=1/6
+[2026-02-21 20:22:24] [stage] launched idx=211 gpu=0 pid=1299838 running=2/6
+[2026-02-21 20:22:24] [stage] launched idx=212 gpu=1 pid=1299843 running=3/6
+[2026-02-21 20:22:24] [stage] launched idx=213 gpu=1 pid=1299848 running=4/6
+[2026-02-21 20:22:24] [stage] launched idx=214 gpu=2 pid=1299853 running=5/6
+[2026-02-21 20:22:24] [stage] launched idx=215 gpu=2 pid=1299858 running=6/6
+[2026-02-21 20:22:26] [stage] finished idx=214 gpu=2 status=ok
+[2026-02-21 20:22:26] [stage] progress 211/288 (73%), failed=0, active=5
+[2026-02-21 20:22:26] [stage] finished idx=215 gpu=2 status=ok
+[2026-02-21 20:22:26] [stage] progress 212/288 (73%), failed=0, active=4
+[2026-02-21 20:22:26] [stage] finished idx=212 gpu=1 status=ok
+[2026-02-21 20:22:26] [stage] progress 213/288 (73%), failed=0, active=3
+[2026-02-21 20:22:26] [stage] finished idx=213 gpu=1 status=ok
+[2026-02-21 20:22:26] [stage] progress 214/288 (74%), failed=0, active=2
+[2026-02-21 20:22:26] [stage] finished idx=210 gpu=0 status=ok
+[2026-02-21 20:22:26] [stage] progress 215/288 (74%), failed=0, active=1
+[2026-02-21 20:22:26] [stage] finished idx=211 gpu=0 status=ok
+[2026-02-21 20:22:26] [stage] progress 216/288 (75%), failed=0, active=0
+[2026-02-21 20:22:26] [stage] launched idx=216 gpu=0 pid=1300054 running=1/6
+[2026-02-21 20:22:26] [stage] launched idx=217 gpu=0 pid=1300059 running=2/6
+[2026-02-21 20:22:26] [stage] launched idx=218 gpu=1 pid=1300064 running=3/6
+[2026-02-21 20:22:26] [stage] launched idx=219 gpu=1 pid=1300069 running=4/6
+[2026-02-21 20:22:26] [stage] launched idx=220 gpu=2 pid=1300074 running=5/6
+[2026-02-21 20:22:27] [stage] launched idx=221 gpu=2 pid=1300078 running=6/6
+[2026-02-21 20:22:29] [stage] finished idx=221 gpu=2 status=ok
+[2026-02-21 20:22:29] [stage] progress 217/288 (75%), failed=0, active=5
+[2026-02-21 20:22:29] [stage] finished idx=220 gpu=2 status=ok
+[2026-02-21 20:22:29] [stage] progress 218/288 (75%), failed=0, active=4
+[2026-02-21 20:22:29] [stage] finished idx=216 gpu=0 status=ok
+[2026-02-21 20:22:29] [stage] progress 219/288 (76%), failed=0, active=3
+[2026-02-21 20:22:29] [stage] finished idx=217 gpu=0 status=ok
+[2026-02-21 20:22:29] [stage] progress 220/288 (76%), failed=0, active=2
+[2026-02-21 20:22:29] [stage] finished idx=219 gpu=1 status=ok
+[2026-02-21 20:22:29] [stage] progress 221/288 (76%), failed=0, active=1
+[2026-02-21 20:22:29] [stage] finished idx=218 gpu=1 status=ok
+[2026-02-21 20:22:29] [stage] progress 222/288 (77%), failed=0, active=0
+[2026-02-21 20:22:29] [stage] launched idx=222 gpu=0 pid=1300323 running=1/6
+[2026-02-21 20:22:29] [stage] launched idx=223 gpu=0 pid=1300328 running=2/6
+[2026-02-21 20:22:29] [stage] launched idx=224 gpu=1 pid=1300333 running=3/6
+[2026-02-21 20:22:29] [stage] launched idx=225 gpu=1 pid=1300338 running=4/6
+[2026-02-21 20:22:29] [stage] launched idx=226 gpu=2 pid=1300343 running=5/6
+[2026-02-21 20:22:29] [stage] launched idx=227 gpu=2 pid=1300348 running=6/6
+[2026-02-21 20:22:31] [stage] finished idx=222 gpu=0 status=ok
+[2026-02-21 20:22:31] [stage] progress 223/288 (77%), failed=0, active=5
+[2026-02-21 20:22:31] [stage] finished idx=223 gpu=0 status=ok
+[2026-02-21 20:22:31] [stage] progress 224/288 (77%), failed=0, active=4
+[2026-02-21 20:22:31] [stage] finished idx=225 gpu=1 status=ok
+[2026-02-21 20:22:31] [stage] progress 225/288 (78%), failed=0, active=3
+[2026-02-21 20:22:31] [stage] finished idx=224 gpu=1 status=ok
+[2026-02-21 20:22:31] [stage] progress 226/288 (78%), failed=0, active=2
+[2026-02-21 20:22:31] [stage] finished idx=227 gpu=2 status=ok
+[2026-02-21 20:22:31] [stage] progress 227/288 (78%), failed=0, active=1
+[2026-02-21 20:22:31] [stage] finished idx=226 gpu=2 status=ok
+[2026-02-21 20:22:31] [stage] progress 228/288 (79%), failed=0, active=0
+[2026-02-21 20:22:31] [stage] launched idx=228 gpu=0 pid=1300577 running=1/6
+[2026-02-21 20:22:31] [stage] launched idx=229 gpu=0 pid=1300582 running=2/6
+[2026-02-21 20:22:31] [stage] launched idx=230 gpu=1 pid=1300587 running=3/6
+[2026-02-21 20:22:31] [stage] launched idx=231 gpu=1 pid=1300592 running=4/6
+[2026-02-21 20:22:31] [stage] launched idx=232 gpu=2 pid=1300597 running=5/6
+[2026-02-21 20:22:31] [stage] launched idx=233 gpu=2 pid=1300602 running=6/6
+[2026-02-21 20:22:33] [stage] finished idx=228 gpu=0 status=ok
+[2026-02-21 20:22:33] [stage] progress 229/288 (79%), failed=0, active=5
+[2026-02-21 20:22:33] [stage] finished idx=230 gpu=1 status=ok
+[2026-02-21 20:22:33] [stage] progress 230/288 (79%), failed=0, active=4
+[2026-02-21 20:22:33] [stage] finished idx=229 gpu=0 status=ok
+[2026-02-21 20:22:33] [stage] progress 231/288 (80%), failed=0, active=3
+[2026-02-21 20:22:33] [stage] finished idx=233 gpu=2 status=ok
+[2026-02-21 20:22:33] [stage] progress 232/288 (80%), failed=0, active=2
+[2026-02-21 20:22:33] [stage] finished idx=231 gpu=1 status=ok
+[2026-02-21 20:22:33] [stage] progress 233/288 (80%), failed=0, active=1
+[2026-02-21 20:22:33] [stage] finished idx=232 gpu=2 status=ok
+[2026-02-21 20:22:33] [stage] progress 234/288 (81%), failed=0, active=0
+[2026-02-21 20:22:33] [stage] launched idx=234 gpu=0 pid=1300820 running=1/6
+[2026-02-21 20:22:33] [stage] launched idx=235 gpu=0 pid=1300824 running=2/6
+[2026-02-21 20:22:33] [stage] launched idx=236 gpu=1 pid=1300830 running=3/6
+[2026-02-21 20:22:33] [stage] launched idx=237 gpu=1 pid=1300835 running=4/6
+[2026-02-21 20:22:33] [stage] launched idx=238 gpu=2 pid=1300840 running=5/6
+[2026-02-21 20:22:33] [stage] launched idx=239 gpu=2 pid=1300845 running=6/6
+[2026-02-21 20:22:35] [stage] finished idx=234 gpu=0 status=ok
+[2026-02-21 20:22:35] [stage] progress 235/288 (81%), failed=0, active=5
+[2026-02-21 20:22:35] [stage] finished idx=235 gpu=0 status=ok
+[2026-02-21 20:22:35] [stage] progress 236/288 (81%), failed=0, active=4
+[2026-02-21 20:22:35] [stage] finished idx=237 gpu=1 status=ok
+[2026-02-21 20:22:35] [stage] progress 237/288 (82%), failed=0, active=3
+[2026-02-21 20:22:35] [stage] finished idx=236 gpu=1 status=ok
+[2026-02-21 20:22:35] [stage] progress 238/288 (82%), failed=0, active=2
+[2026-02-21 20:22:35] [stage] finished idx=239 gpu=2 status=ok
+[2026-02-21 20:22:35] [stage] progress 239/288 (82%), failed=0, active=1
+[2026-02-21 20:22:35] [stage] finished idx=238 gpu=2 status=ok
+[2026-02-21 20:22:35] [stage] progress 240/288 (83%), failed=0, active=0
+[2026-02-21 20:22:36] [stage] launched idx=240 gpu=0 pid=1301058 running=1/6
+[2026-02-21 20:22:36] [stage] launched idx=241 gpu=0 pid=1301063 running=2/6
+[2026-02-21 20:22:36] [stage] launched idx=242 gpu=1 pid=1301068 running=3/6
+[2026-02-21 20:22:36] [stage] launched idx=243 gpu=1 pid=1301073 running=4/6
+[2026-02-21 20:22:36] [stage] launched idx=244 gpu=2 pid=1301078 running=5/6
+[2026-02-21 20:22:36] [stage] launched idx=245 gpu=2 pid=1301083 running=6/6
+[2026-02-21 20:22:38] [stage] finished idx=240 gpu=0 status=ok
+[2026-02-21 20:22:38] [stage] progress 241/288 (83%), failed=0, active=5
+[2026-02-21 20:22:38] [stage] finished idx=245 gpu=2 status=ok
+[2026-02-21 20:22:38] [stage] progress 242/288 (84%), failed=0, active=4
+[2026-02-21 20:22:38] [stage] finished idx=241 gpu=0 status=ok
+[2026-02-21 20:22:38] [stage] progress 243/288 (84%), failed=0, active=3
+[2026-02-21 20:22:38] [stage] finished idx=242 gpu=1 status=ok
+[2026-02-21 20:22:38] [stage] progress 244/288 (84%), failed=0, active=2
+[2026-02-21 20:22:38] [stage] finished idx=243 gpu=1 status=ok
+[2026-02-21 20:22:38] [stage] progress 245/288 (85%), failed=0, active=1
+[2026-02-21 20:22:38] [stage] finished idx=244 gpu=2 status=ok
+[2026-02-21 20:22:38] [stage] progress 246/288 (85%), failed=0, active=0
+[2026-02-21 20:22:38] [stage] launched idx=246 gpu=0 pid=1301271 running=1/6
+[2026-02-21 20:22:38] [stage] launched idx=247 gpu=0 pid=1301276 running=2/6
+[2026-02-21 20:22:38] [stage] launched idx=248 gpu=1 pid=1301281 running=3/6
+[2026-02-21 20:22:38] [stage] launched idx=249 gpu=1 pid=1301286 running=4/6
+[2026-02-21 20:22:38] [stage] launched idx=250 gpu=2 pid=1301291 running=5/6
+[2026-02-21 20:22:38] [stage] launched idx=251 gpu=2 pid=1301296 running=6/6
+[2026-02-21 20:22:40] [stage] finished idx=246 gpu=0 status=ok
+[2026-02-21 20:22:40] [stage] progress 247/288 (85%), failed=0, active=5
+[2026-02-21 20:22:40] [stage] finished idx=247 gpu=0 status=ok
+[2026-02-21 20:22:40] [stage] progress 248/288 (86%), failed=0, active=4
+[2026-02-21 20:22:40] [stage] finished idx=248 gpu=1 status=ok
+[2026-02-21 20:22:40] [stage] progress 249/288 (86%), failed=0, active=3
+[2026-02-21 20:22:40] [stage] finished idx=249 gpu=1 status=ok
+[2026-02-21 20:22:40] [stage] progress 250/288 (86%), failed=0, active=2
+[2026-02-21 20:22:40] [stage] finished idx=251 gpu=2 status=ok
+[2026-02-21 20:22:40] [stage] progress 251/288 (87%), failed=0, active=1
+[2026-02-21 20:22:40] [stage] finished idx=250 gpu=2 status=ok
+[2026-02-21 20:22:40] [stage] progress 252/288 (87%), failed=0, active=0
+[2026-02-21 20:22:40] [stage] launched idx=252 gpu=0 pid=1301482 running=1/6
+[2026-02-21 20:22:40] [stage] launched idx=253 gpu=0 pid=1301486 running=2/6
+[2026-02-21 20:22:40] [stage] launched idx=254 gpu=1 pid=1301492 running=3/6
+[2026-02-21 20:22:40] [stage] launched idx=255 gpu=1 pid=1301497 running=4/6
+[2026-02-21 20:22:40] [stage] launched idx=256 gpu=2 pid=1301502 running=5/6
+[2026-02-21 20:22:40] [stage] launched idx=257 gpu=2 pid=1301507 running=6/6
+[2026-02-21 20:22:42] [stage] finished idx=253 gpu=0 status=ok
+[2026-02-21 20:22:42] [stage] progress 253/288 (87%), failed=0, active=5
+[2026-02-21 20:22:42] [stage] finished idx=252 gpu=0 status=ok
+[2026-02-21 20:22:42] [stage] progress 254/288 (88%), failed=0, active=4
+[2026-02-21 20:22:42] [stage] finished idx=257 gpu=2 status=ok
+[2026-02-21 20:22:42] [stage] progress 255/288 (88%), failed=0, active=3
+[2026-02-21 20:22:42] [stage] finished idx=256 gpu=2 status=ok
+[2026-02-21 20:22:42] [stage] progress 256/288 (88%), failed=0, active=2
+[2026-02-21 20:22:42] [stage] finished idx=255 gpu=1 status=ok
+[2026-02-21 20:22:42] [stage] progress 257/288 (89%), failed=0, active=1
+[2026-02-21 20:22:42] [stage] finished idx=254 gpu=1 status=ok
+[2026-02-21 20:22:42] [stage] progress 258/288 (89%), failed=0, active=0
+[2026-02-21 20:22:42] [stage] launched idx=258 gpu=0 pid=1301693 running=1/6
+[2026-02-21 20:22:42] [stage] launched idx=259 gpu=0 pid=1301698 running=2/6
+[2026-02-21 20:22:42] [stage] launched idx=260 gpu=1 pid=1301703 running=3/6
+[2026-02-21 20:22:42] [stage] launched idx=261 gpu=1 pid=1301708 running=4/6
+[2026-02-21 20:22:42] [stage] launched idx=262 gpu=2 pid=1301713 running=5/6
+[2026-02-21 20:22:42] [stage] launched idx=263 gpu=2 pid=1301718 running=6/6
+[2026-02-21 20:22:44] [stage] finished idx=261 gpu=1 status=ok
+[2026-02-21 20:22:44] [stage] progress 259/288 (89%), failed=0, active=5
+[2026-02-21 20:22:44] [stage] finished idx=260 gpu=1 status=ok
+[2026-02-21 20:22:44] [stage] progress 260/288 (90%), failed=0, active=4
+[2026-02-21 20:22:45] [stage] finished idx=258 gpu=0 status=ok
+[2026-02-21 20:22:45] [stage] progress 261/288 (90%), failed=0, active=3
+[2026-02-21 20:22:45] [stage] finished idx=259 gpu=0 status=ok
+[2026-02-21 20:22:45] [stage] progress 262/288 (90%), failed=0, active=2
+[2026-02-21 20:22:45] [stage] finished idx=263 gpu=2 status=ok
+[2026-02-21 20:22:45] [stage] progress 263/288 (91%), failed=0, active=1
+[2026-02-21 20:22:45] [stage] finished idx=262 gpu=2 status=ok
+[2026-02-21 20:22:45] [stage] progress 264/288 (91%), failed=0, active=0
+[2026-02-21 20:22:45] [stage] launched idx=264 gpu=0 pid=1301929 running=1/6
+[2026-02-21 20:22:45] [stage] launched idx=265 gpu=0 pid=1301934 running=2/6
+[2026-02-21 20:22:45] [stage] launched idx=266 gpu=1 pid=1301939 running=3/6
+[2026-02-21 20:22:45] [stage] launched idx=267 gpu=1 pid=1301944 running=4/6
+[2026-02-21 20:22:45] [stage] launched idx=268 gpu=2 pid=1301949 running=5/6
+[2026-02-21 20:22:45] [stage] launched idx=269 gpu=2 pid=1301954 running=6/6
+[2026-02-21 20:22:47] [stage] finished idx=266 gpu=1 status=ok
+[2026-02-21 20:22:47] [stage] progress 265/288 (92%), failed=0, active=5
+[2026-02-21 20:22:47] [stage] finished idx=265 gpu=0 status=ok
+[2026-02-21 20:22:47] [stage] progress 266/288 (92%), failed=0, active=4
+[2026-02-21 20:22:47] [stage] finished idx=264 gpu=0 status=ok
+[2026-02-21 20:22:47] [stage] progress 267/288 (92%), failed=0, active=3
+[2026-02-21 20:22:47] [stage] finished idx=269 gpu=2 status=ok
+[2026-02-21 20:22:47] [stage] progress 268/288 (93%), failed=0, active=2
+[2026-02-21 20:22:47] [stage] finished idx=268 gpu=2 status=ok
+[2026-02-21 20:22:47] [stage] progress 269/288 (93%), failed=0, active=1
+[2026-02-21 20:22:47] [stage] finished idx=267 gpu=1 status=ok
+[2026-02-21 20:22:47] [stage] progress 270/288 (93%), failed=0, active=0
+[2026-02-21 20:22:47] [stage] launched idx=270 gpu=0 pid=1302146 running=1/6
+[2026-02-21 20:22:47] [stage] launched idx=271 gpu=0 pid=1302151 running=2/6
+[2026-02-21 20:22:47] [stage] launched idx=272 gpu=1 pid=1302156 running=3/6
+[2026-02-21 20:22:47] [stage] launched idx=273 gpu=1 pid=1302161 running=4/6
+[2026-02-21 20:22:47] [stage] launched idx=274 gpu=2 pid=1302166 running=5/6
+[2026-02-21 20:22:47] [stage] launched idx=275 gpu=2 pid=1302171 running=6/6
+[2026-02-21 20:22:49] [stage] finished idx=272 gpu=1 status=ok
+[2026-02-21 20:22:49] [stage] progress 271/288 (94%), failed=0, active=5
+[2026-02-21 20:22:49] [stage] finished idx=271 gpu=0 status=ok
+[2026-02-21 20:22:49] [stage] progress 272/288 (94%), failed=0, active=4
+[2026-02-21 20:22:49] [stage] finished idx=273 gpu=1 status=ok
+[2026-02-21 20:22:49] [stage] progress 273/288 (94%), failed=0, active=3
+[2026-02-21 20:22:49] [stage] finished idx=274 gpu=2 status=ok
+[2026-02-21 20:22:49] [stage] progress 274/288 (95%), failed=0, active=2
+[2026-02-21 20:22:49] [stage] finished idx=270 gpu=0 status=ok
+[2026-02-21 20:22:49] [stage] progress 275/288 (95%), failed=0, active=1
+[2026-02-21 20:22:49] [stage] finished idx=275 gpu=2 status=ok
+[2026-02-21 20:22:49] [stage] progress 276/288 (95%), failed=0, active=0
+[2026-02-21 20:22:49] [stage] launched idx=276 gpu=0 pid=1302359 running=1/6
+[2026-02-21 20:22:49] [stage] launched idx=277 gpu=0 pid=1302364 running=2/6
+[2026-02-21 20:22:49] [stage] launched idx=278 gpu=1 pid=1302369 running=3/6
+[2026-02-21 20:22:49] [stage] launched idx=279 gpu=1 pid=1302374 running=4/6
+[2026-02-21 20:22:49] [stage] launched idx=280 gpu=2 pid=1302379 running=5/6
+[2026-02-21 20:22:49] [stage] launched idx=281 gpu=2 pid=1302384 running=6/6
+[2026-02-21 20:22:51] [stage] finished idx=280 gpu=2 status=ok
+[2026-02-21 20:22:51] [stage] progress 277/288 (96%), failed=0, active=5
+[2026-02-21 20:22:51] [stage] finished idx=279 gpu=1 status=ok
+[2026-02-21 20:22:51] [stage] progress 278/288 (96%), failed=0, active=4
+[2026-02-21 20:22:51] [stage] finished idx=278 gpu=1 status=ok
+[2026-02-21 20:22:51] [stage] progress 279/288 (96%), failed=0, active=3
+[2026-02-21 20:22:51] [stage] finished idx=277 gpu=0 status=ok
+[2026-02-21 20:22:51] [stage] progress 280/288 (97%), failed=0, active=2
+[2026-02-21 20:22:52] [stage] finished idx=281 gpu=2 status=ok
+[2026-02-21 20:22:52] [stage] progress 281/288 (97%), failed=0, active=1
+[2026-02-21 20:22:52] [stage] finished idx=276 gpu=0 status=ok
+[2026-02-21 20:22:52] [stage] progress 282/288 (97%), failed=0, active=0
+[2026-02-21 20:22:52] [stage] launched idx=282 gpu=0 pid=1302595 running=1/6
+[2026-02-21 20:22:52] [stage] launched idx=283 gpu=0 pid=1302600 running=2/6
+[2026-02-21 20:22:52] [stage] launched idx=284 gpu=1 pid=1302605 running=3/6
+[2026-02-21 20:22:52] [stage] launched idx=285 gpu=1 pid=1302610 running=4/6
+[2026-02-21 20:22:52] [stage] launched idx=286 gpu=2 pid=1302615 running=5/6
+[2026-02-21 20:22:52] [stage] launched idx=287 gpu=2 pid=1302620 running=6/6
+[2026-02-21 20:22:54] [stage] finished idx=287 gpu=2 status=ok
+[2026-02-21 20:22:54] [stage] progress 283/288 (98%), failed=0, active=5
+[2026-02-21 20:22:54] [stage] finished idx=284 gpu=1 status=ok
+[2026-02-21 20:22:54] [stage] progress 284/288 (98%), failed=0, active=4
+[2026-02-21 20:22:54] [stage] finished idx=283 gpu=0 status=ok
+[2026-02-21 20:22:54] [stage] progress 285/288 (98%), failed=0, active=3
+[2026-02-21 20:22:54] [stage] finished idx=282 gpu=0 status=ok
+[2026-02-21 20:22:54] [stage] progress 286/288 (99%), failed=0, active=2
+[2026-02-21 20:22:54] [stage] finished idx=286 gpu=2 status=ok
+[2026-02-21 20:22:54] [stage] progress 287/288 (99%), failed=0, active=1
+[2026-02-21 20:22:54] [stage] finished idx=285 gpu=1 status=ok
+[2026-02-21 20:22:54] [stage] progress 288/288 (100%), failed=0, active=0
+[export-csv] wrote outputs/history/runs.csv
+[2026-02-21 20:22:54] [stage] completed stage_name=stage1_all total=288 failed=0
+
+==============================================
+SWEEP COMPLETE
+==============================================
+Completed at: Sat Feb 21 08:22:54 PM CET 2026
+==============================================

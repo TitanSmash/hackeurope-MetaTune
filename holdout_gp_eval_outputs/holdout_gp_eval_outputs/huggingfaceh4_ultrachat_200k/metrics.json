@@ -1,0 +1,19 @@
+{
+  "dataset_slug": "huggingfaceh4_ultrachat_200k",
+  "status": "ok",
+  "n_train_total": 384,
+  "n_heldout": 192,
+  "neighbor_k": 10,
+  "n_suggestions": 3,
+  "n_neighbors_used": 10,
+  "mae": 0.27054053258245236,
+  "rmse": 0.3073134437771409,
+  "spearman": -0.253252789257001,
+  "best_actual_val_loss": 2.618424108274941,
+  "regret_at_1": 0.0,
+  "regret_at_3": 0.0,
+  "regret_at_5": 0.0,
+  "suggestion_best_matched_val_loss": 2.630707920652439,
+  "suggestion_best_matched_regret": 0.01228381237749776,
+  "suggestion_mean_matched_regret": 0.25906238914197743
+}
