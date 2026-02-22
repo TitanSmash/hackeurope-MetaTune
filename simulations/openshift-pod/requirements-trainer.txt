@@ -1,0 +1,15 @@
+# Core GPU training stack
+torch>=2.2.0
+transformers>=4.41.0
+datasets>=2.19.0
+accelerate>=0.30.0
+peft>=0.11.0
+
+# Runtime dependencies used by nanoGPT-LoRA
+numpy>=1.26.0
+tiktoken>=0.7.0
+requests>=2.31.0
+safetensors>=0.4.0
+sentencepiece>=0.2.0
+protobuf>=4.25.0
+

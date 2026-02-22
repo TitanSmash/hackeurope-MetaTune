@@ -1,0 +1,19 @@
+FROM registry.access.redhat.com/ubi9/python-311:latest
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1
+
+WORKDIR /opt/app-root/src
+
+RUN python3 -m pip install --upgrade pip setuptools wheel
+
+COPY simulations/openshift-pod/requirements-scheduler.txt /tmp/requirements-scheduler.txt
+RUN python3 -m pip install -r /tmp/requirements-scheduler.txt
+
+COPY simulations/openshift-pod/app /opt/app-root/src/app
+
+EXPOSE 8000
+
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+

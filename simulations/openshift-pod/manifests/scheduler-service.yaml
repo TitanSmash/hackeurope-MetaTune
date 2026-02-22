@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: metatune-scheduler
+  namespace: hack-europe-team-i
+  labels:
+    app: metatune-scheduler
+spec:
+  selector:
+    app: metatune-scheduler
+  ports:
+    - name: http
+      port: 8000
+      targetPort: http
+

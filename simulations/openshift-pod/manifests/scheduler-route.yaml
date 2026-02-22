@@ -1,0 +1,17 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: metatune-scheduler
+  namespace: hack-europe-team-i
+  labels:
+    app: metatune-scheduler
+spec:
+  to:
+    kind: Service
+    name: metatune-scheduler
+  port:
+    targetPort: http
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
+

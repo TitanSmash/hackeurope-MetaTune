@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: metatune-scheduler
+  namespace: hack-europe-team-i
+  labels:
+    app: metatune-scheduler
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: metatune-scheduler
+  template:
+    metadata:
+      labels:
+        app: metatune-scheduler
+    spec:
+      serviceAccountName: metatune-scheduler-sa
+      containers:
+        - name: scheduler
+          image: ${SCHEDULER_IMAGE}
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 8000
+          envFrom:
+            - configMapRef:
+                name: metatune-scheduler-config
+          volumeMounts:
+            - name: shared-data
+              mountPath: /data
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: http
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: http
+            initialDelaySeconds: 15
+            periodSeconds: 20
+      volumes:
+        - name: shared-data
+          persistentVolumeClaim:
+            claimName: train-cache-pvc

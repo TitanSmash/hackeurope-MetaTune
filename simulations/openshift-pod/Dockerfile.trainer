@@ -1,0 +1,19 @@
+FROM registry.access.redhat.com/ubi9/python-311:latest
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1 \
+    HOME=/opt/app-root
+
+WORKDIR /opt/app-root/src
+
+RUN python3 -m pip install --upgrade pip setuptools wheel
+
+COPY simulations/openshift-pod/requirements-trainer.txt /tmp/requirements-trainer.txt
+RUN python3 -m pip install --extra-index-url https://download.pytorch.org/whl/cu121 -r /tmp/requirements-trainer.txt
+
+COPY simulations/nanoGPT-LoRA-master /opt/app-root/src/simulations/nanoGPT-LoRA-master
+COPY simulations/openshift-pod/trainer /opt/app-root/src/simulations/openshift-pod/trainer
+
+CMD ["python3", "simulations/openshift-pod/trainer/runner.py"]
+
