@@ -105,6 +105,15 @@ class GaussianProcessSurrogate:
 
         means, stds = self.gp.predict(samples_norm, return_std=True)
 
+        # save the data as csv for later analysis
+        output_df = pd.DataFrame(
+            samples[:, len(self.metafeature_cols) :],
+            columns=self.feature_cols,
+        )
+        output_df["predicted_loss"] = means
+        output_df["std"] = stds
+        output_df.to_csv(f"{file_prefix}_param_space.csv", index=False)
+
         # output the 5 best samples according to the upper confidence bound (mean - 1.96*std)
         ucb = means - 1.96 * stds
         best_indices = np.argsort(ucb)[:5]
